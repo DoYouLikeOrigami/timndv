@@ -1,0 +1,66 @@
+.btn {
+	display: inline-block;
+	box-sizing: border-box;
+
+	padding: 6px 35px;
+
+	border-radius: 6px;
+	border: 1px solid @altAkcentColor;
+
+	text-align: center;
+	vertical-align: middle;
+	line-height: 20px;
+	font-size: 16px;
+
+	color: @altAkcentColor;
+	background-color: transparent;
+
+	cursor: pointer;
+	outline: none;
+	transition: .3s;
+
+	&:focus {
+		transform: translateY(3px);
+	}
+
+	&:hover {
+		background-color: @btn-blue;
+		color: #fff;
+	}
+
+	&--upper {
+		text-transform: uppercase;
+	}
+
+	&--attention {
+		background-color: @altAkcentColor;
+		border-color: @altAkcentColor;
+		color: #fff;
+
+		&:hover {
+			background-color: darken(@altAkcentColor, 10%);
+			color: #fff;
+		}
+	}
+
+	&--bold {
+		font-weight: bold;
+		font-size: 21px;
+	}
+
+	&--big-text {
+		font-size: 24px;
+	}
+
+	&--big {
+		padding: 25px 35px;
+	}
+
+	&--bigger {
+		padding: 20px 35px;
+	}
+
+	&--mr {
+		margin-right: 20px;
+	}
+}

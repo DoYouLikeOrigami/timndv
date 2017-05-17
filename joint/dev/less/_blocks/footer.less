@@ -1,0 +1,120 @@
+.footer {
+	&__wrap {
+		.wrap();
+	}
+
+	&__bottom {
+		display: block;
+		padding: 25px 0;
+	}
+
+	&__flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+		display: block;
+
+		&-img {
+			display: none;
+			vertical-align: middle;
+
+			width: 80px;
+
+			margin-right: 20px;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		//Заглушка картинки на время
+		&::before {
+			content: "";
+
+			display: inline-block;
+			vertical-align: middle;
+
+			width: 80px;
+			height: 80px;
+
+			background-color: @akcentColor;
+
+			margin-right: 20px;
+		}
+
+		&-text {
+			display: inline-block;
+			vertical-align: middle;
+			max-width: 280px;
+		}
+
+		&-title {
+			.section-header();
+			margin-bottom: 10px;
+			font-size: 26px;
+		}
+	}
+
+	&__socials {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+
+		&-list {
+			display: flex;
+			justify-content: space-between;
+
+			list-style-type: none;
+
+			margin-bottom: 10px;
+		}
+
+		&-item {
+			display: block;
+
+			a {
+				display: block;
+
+				width: 65px;
+				height: 65px;
+
+				background: center no-repeat;
+				background-size: 190%;
+
+				transition: .3s;
+
+				font-size: 0;
+
+				&:hover {
+					box-shadow: 0 0 2px 2px @altAkcentColor;
+				}
+			}
+
+			&--vk a {
+				background-image: url(../img/icons/vk.svg);
+			}
+
+			&--fb a {
+				background-image: url(../img/icons/fb.svg);
+			}
+
+			&--yt a {
+				background-image: url(../img/icons/yt.svg);
+			}
+		}
+	}
+
+	&__tel {
+		text-align: right;
+
+		& > a {
+			.section-header();
+			color: @textColor;
+			line-height: 1;
+			margin-bottom: 10px;
+		}
+	}
+}
