@@ -1,0 +1,98 @@
+.banner {
+	display: block;
+	position: relative;
+
+	padding-bottom: 55px;
+
+	&::after {
+		content: "";
+
+		display: block;
+		position: absolute;
+
+		bottom: 0;
+		right: 40px;
+
+		width: 30px;
+		height: 30px;
+
+		background: url(../img/ban/arrow.svg) center no-repeat;
+		background-size: contain;
+
+		transition: .3s;
+
+		cursor: pointer;
+
+		&:hover {
+			background-image: url(../img/ban/arrow--active.svg);
+		}
+	}
+
+	&__seminar {
+		display: flex;
+		position: relative;
+		justify-content: flex-end;
+
+		padding-left: 5%;
+		width: 80%;
+
+		background: url(../img/ban/seminar.jpg) right center;
+		background-size: cover;
+
+		&-wrap {
+			display: block;
+			position: relative;
+
+			max-width: 1024px;
+
+			padding: 90px 0;
+		}
+
+		&::after {
+			content: "";
+
+			display: block;
+			position: absolute;
+
+			width: 100%;
+			height: 100%;
+
+			right: -5%;
+			bottom: -55px;
+
+			z-index: -1;
+
+			background: linear-gradient(to right, #fff, @altAkcentColor);
+		}
+	}
+
+	&__title {
+		.section-header();
+		max-width: 60%;
+		line-height: 1.1;
+	}
+
+	&__facts {
+		display: flex;
+
+		list-style-type: none;
+
+		margin-bottom: 40px;
+
+		li {
+			margin-right: 25px;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__video-btn {
+		.play-btn();
+
+		top: 50%;
+		right: 20%;
+		transform: translate(50%, -50%);
+	}
+}

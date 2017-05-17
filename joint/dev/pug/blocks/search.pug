@@ -1,0 +1,43 @@
+section.search
+	.search__left
+		h2.search__title
+			| Объекты на карте
+		.search__map
+
+	.search__right
+		.search__content
+			.search__step
+				span.search__step-curr 1
+				span.search__step-of
+					| &nbsp;/ 4
+			h3.search__content-title
+				| Найдите свой идеальный вариант
+			form.search__form(method="" action="")
+				.search__block
+					.search__block-title
+						| Выберите количество комнат
+					label.search__label
+						span Студия
+						input(type="radio" name="rooms" value="studio")
+					label.search__label.search__label--active
+						span 1 комната
+						input(type="radio" name="rooms" value="one")
+					label.search__label
+						span 2 комнаты
+						input(type="radio" name="rooms" value="two")
+					label.search__label
+						span 3 комнаты
+						input(type="radio" name="rooms" value="three")
+					label.search__label
+						span Больше 3-ех комнат
+						input(type="radio" name="rooms" value="more")
+
+					.search__block-btn
+						button Далее
+
+				.search__results
+					.search__results-number
+						span Подобрано
+						span.js--results-number 256
+						span вариантов
+					button.btn.btn--upper(type="submit") Показать

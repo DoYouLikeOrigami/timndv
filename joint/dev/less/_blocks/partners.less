@@ -1,0 +1,49 @@
+.partners {
+	display: block;
+	padding: 100px 0;
+
+	background: @greyColor;
+
+	&__wrap {
+		.wrap();
+	}
+
+	&__flex {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__title {
+		.section-header();
+		margin-bottom: 0;
+		margin-right: 90px;
+		line-height: 1;
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		list-style-type: none;
+
+		margin-right: 90px;
+	}
+
+	&__item {
+		display: block;
+		margin-right: 45px;
+
+		a {
+			height: 46px;
+
+			img {
+				display: block;
+				height: 100%;
+			}
+		}
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+}

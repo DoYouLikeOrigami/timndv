@@ -1,0 +1,37 @@
+footer.footer
+	include footer-search.pug
+	include footer-nav.pug
+
+	.footer__bottom
+		.footer__wrap
+			.footer__flex
+
+				.footer__logo
+					.footer__logo-img
+						img(src="" alt="Название компании")
+					.footer__logo-text
+						h3.footer__logo-title
+							| Название компании
+						p.footer__logo-descr
+							| Продажа недвижимости в Санкт-Петербурге и ЛО
+
+				.footer__socials
+					ul.footer__socials-list
+						li.footer__socials-item.footer__socials-item--vk
+							a(href="#") ВКонтакте
+						li.footer__socials-item.footer__socials-item--yt
+							a(href="#") Youtube
+						li.footer__socials-item.footer__socials-item--fb
+							a(href="#") Facebook
+					button.btn.btn--attention.btn--upper.js--show-msg-popup Написать письмо
+
+				.footer__address
+					| Адрес нашего офиса
+					br
+					| Невский пр. 7, офис 3
+
+				.footer__tel
+					a(href="+79995555555")
+						| +7 (812) 555-55-55
+					button.btn.btn--upper.js--show-order-get-popup Заявка на подбор
+

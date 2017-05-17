@@ -1,0 +1,45 @@
+.main-nav {
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+
+	&__item {
+		display: block;
+		position: relative;
+
+		padding: 15px 0;
+		margin-right: 45px;
+
+		color: @textColor;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		&::after {
+			content: "";
+
+			display: block;
+			position: absolute;
+
+			width: 0;
+			height: 2px;
+
+			left: 0;
+			bottom: 0;
+
+			background: @akcentColor;
+
+			transition: .3s ease-in;
+		}
+
+		&:hover::after {
+			width: 100%;
+		}
+
+		&--attention::after {
+			width: 40px;
+		}
+	}
+}

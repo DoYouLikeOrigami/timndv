@@ -10,9 +10,10 @@ html(lang="ru")
 		block seo
 
 	body
-		.container
-			block main-content
+		include ../blocks/header.pug
+		block main-content
+		include ../blocks/footer.pug
 
-			.overlay
+		.overlay
 
-			script(src="/static/js/main.js")
+		script(src="/static/js/main.js")

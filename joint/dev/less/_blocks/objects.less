@@ -1,0 +1,168 @@
+.objects {
+	display: block;
+	position: relative;
+
+	padding: 60px 0 30px;
+	background: @greyColor;
+
+	&__wrap {
+		.wrap();
+	}
+
+	&__title {
+		.section-header();
+		margin-bottom: 60px;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		align-items: stretch;
+	}
+
+	&__item {
+		display: block;
+		position: relative;
+
+		width: 305px;
+
+		z-index: 0;
+
+		margin-bottom: 60px;
+		margin-right: 90px;
+
+		&:nth-of-type(3n) {
+			margin-right: 0;
+		}
+
+		&--action {
+			&::before {
+				content: "";
+
+				display: block;
+				position: absolute;
+
+				height: 305px;
+				width: 325px;
+
+				background-color: @akcentColor;
+
+				left: 0;
+				top: 0;
+
+				z-index: -1;
+			}
+
+			.objects__item-title {
+				font-size: 23px;
+				line-height: 25px;
+				font-weight: bold;
+
+				padding: 35px 0 25px 40px;
+			}
+
+			.objects__img {
+				margin-left: -15px;
+			}
+
+			.objects__content {
+				background-color: transparent;
+				border: 1px solid @textColor;
+				border-top: none;
+			}
+
+			.objects__link::after {
+				display: none;
+			}
+		}
+	}
+
+	&__img {
+		display: block;
+		position: relative;
+
+		height: 220px;
+		margin-bottom: 0;
+	}
+
+	&__content {
+		display: block;
+		position: relative;
+
+		padding: 30px 35px 50px;
+
+		background: #fff;
+	}
+
+	&__info {
+		position: relative;
+
+		list-style-type: none;
+		margin-bottom: 30px;
+
+		li {
+			margin-bottom: 5px;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+
+		&--links {
+			font-weight: bold;
+			color: @textColor;
+
+			margin-bottom: 0;
+
+			li:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__btn {
+		display: block;
+		text-align: right;
+	}
+
+	&__link {
+		display: inline-block;
+		position: relative;
+
+		padding: 10px 20px;
+
+		background: @altAkcentColor;
+		color: #fff;
+
+		line-height: 20px;
+
+		&:hover {
+			background: darken(@altAkcentColor, 10%);
+
+			&::after {
+				transform: translateX(0);
+			}
+		}
+
+		&::after {
+			content: "";
+
+			display: block;
+			position: absolute;
+
+			background: @akcentColor;
+
+			right: 0;
+			top: 0;
+
+			height: 100%;
+			width: 20px;
+
+			transform: translateX(100%);
+			transition: .3s;
+
+			z-index: -1;
+		}
+	}
+}

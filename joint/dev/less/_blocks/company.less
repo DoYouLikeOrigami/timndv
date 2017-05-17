@@ -1,0 +1,45 @@
+.company {
+	display: block;
+	position: relative;
+
+	padding: 60px 0 0;
+
+	background: url(../img/company/bg-left.svg) left -420px no-repeat, url(../img/company/bg-right.svg) right -420px no-repeat;
+	background-size: 600px;
+
+	&__wrap {
+		.wrap();
+	}
+
+	&__title {
+		.section-header();
+		max-width: 440px;
+
+		margin: 0 auto 20px;
+		text-align: center;
+	}
+
+	&__descr {
+		display: block;
+		margin: 0 auto;
+		text-align: justifyCenter;
+		max-width: 400px;
+	}
+
+	&__video {
+		display: block;
+
+		padding: 80px 0;
+		text-align: center;
+
+		&-play {
+			.play-btn();
+
+			display: inline-block;
+			position: relative;
+
+			border: none;
+			cursor: pointer;
+		}
+	}
+}
