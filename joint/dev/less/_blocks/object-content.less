@@ -1,0 +1,155 @@
+.object-content {
+	display: block;
+	position: relative;
+
+	&__wrap {
+		.wrap();
+	}
+
+	&__flex {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	&__block {
+		&--bordered {
+			.object-content {
+				&__title {
+					padding-left: 90px;
+				}
+
+				&__list {
+					padding: 55px 270px 55px 90px;
+					border: 12px solid @altAkcentColor;
+					border-bottom: none;
+
+					background: url(../img/object-content/house.svg) right 155% no-repeat;
+					background-size: 240px;
+
+					&::before {
+						content: "";
+
+						display: block;
+						position: absolute;
+
+						width: 30px;
+						height: 30px;
+
+						bottom: 55px;
+						left: 45px;
+						transform: translateX(-50%);
+
+						background: url(../img/icons/arrow--active.svg) center no-repeat;
+						background-size: cover;
+					}
+
+					&::after {
+						content: "";
+
+						display: block;
+						position: absolute;
+
+						bottom: 0;
+						left: -12px;
+
+						width: 58%;
+						height: 12px;
+
+						background-color: @altAkcentColor;
+					}
+				}
+			}
+		}
+	}
+
+	&__title {
+		display: block;
+
+		font-size: 23px;
+		line-height: 25px;
+		font-weight: bold;
+
+		margin-bottom: 30px;
+	}
+
+	&__list {
+		position: relative;
+		list-style-type: none;
+
+		li {
+			display: block;
+			margin-bottom: 5px;
+
+			span {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			a {
+				display: inline-block;
+				vertical-align: middle;
+
+				font-weight: bold;
+				color: @textColor;
+
+				&::after {
+					content: "";
+
+					display: inline-block;
+					vertical-align: middle;
+
+					margin-left: 25px;
+
+					width: 25px;
+					height: 25px;
+
+					background: url(../img/icons/eye.svg) center no-repeat;
+					background-size: cover;
+
+					transition: .3s;
+				}
+
+				&:hover {
+					text-decoration: underline;
+
+					&::after {
+						background-image: url(../img/icons/eye--active.svg);
+					}
+				}
+			}
+		}
+
+		&--fixed-span {
+			li span {
+				width: 70px;
+			}
+		}
+	}
+
+	&__more {
+		display: block;
+		position: relative;
+
+		margin-top: 15px;
+
+		font-size: 14px;
+		line-height: 15px;
+
+		&::after {
+			content: "";
+
+			display: block;
+			position: absolute;
+
+			width: 35px;
+			height: 20px;
+
+			right: 15px;
+			top: -9px;
+
+			background: url(../img/icons/watch.png) center no-repeat;
+			background-size: contain;
+		}
+	}
+}

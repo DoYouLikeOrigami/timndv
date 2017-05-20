@@ -1,0 +1,52 @@
+.object-action {
+	display: flex;
+	align-items: stretch;
+	position: fixed;
+
+	top: 50%;
+	left: -250px;
+
+	transform: translateY(-50%);
+	transition: .3s ease-in;
+
+	color: @textColor;
+
+	&:hover {
+		transform: translate(250px, -50%);
+	}
+
+	&__left {
+		display: block;
+		box-sizing: border-box;
+
+		width: 250px;
+
+		padding: 15px;
+
+		border: 2px solid @akcentColor;
+		border-right: none;
+
+		background: #fff;
+	}
+
+	&__right {
+		display: block;
+
+		padding: 60px 10px;
+
+		font-size: 18px;
+		line-height: 20px;
+		color: #fff;
+		text-transform: uppercase;
+		font-weight: bold;
+		text-align: center;
+
+		background: @akcentColor;
+
+		span {
+			display: block;
+			transform: rotate(-90deg);
+			margin: 0 -20px;
+		}
+	}
+}

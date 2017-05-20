@@ -1,0 +1,13 @@
+extends ../layouts/base
+
+block seo
+	title Заголовок
+	meta(name="description" content="Описание")
+
+block main-content
+	include ../blocks/object-img.pug
+	include ../blocks/object-content.pug
+	include ../blocks/object-description.pug
+	include ../blocks/count.pug
+	include ../blocks/objects--object.pug
+	include ../blocks/object-action.pug

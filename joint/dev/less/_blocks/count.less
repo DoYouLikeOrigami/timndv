@@ -1,0 +1,197 @@
+.count {
+	display: block;
+	position: relative;
+	padding: 60px 0;
+
+	&__wrap {
+		.wrap();
+
+		&--btns {
+			display: flex;
+		}
+	}
+
+	&__title {
+		.section-header();
+		margin-bottom: 60px;
+	}
+
+	&__content {
+		display: block;
+		background: @greyColor;
+
+		margin-bottom: 45px;
+	}
+
+	&__flex {
+		display: flex;
+		align-items: stretch;
+	}
+
+	&__left,
+	&__right {
+		display: block;
+		box-sizing: border-box;
+
+		width: 50%;
+		flex: 1 1 50%;
+
+		padding: 45px 5% 45px 0;
+	}
+
+	&__right {
+		border-left: 2px solid #fff;
+
+		padding-left: 5%;
+	}
+
+	&__subtitle {
+		display: block;
+
+		font-size: 23px;
+		line-height: 25px;
+		font-weight: bold;
+
+		margin-bottom: 45px;
+	}
+
+	&__form {
+
+		p {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__label {
+		display: inline-block;
+		vertical-align: middle;
+
+		width: 250px;
+		margin-bottom: 30px;
+	}
+
+	&__input {
+		display: block;
+		margin-top: 5px;
+
+		&--mb {
+			margin-top: 0;
+
+			input {
+				margin-bottom: 15px;
+			}
+		}
+
+		input {
+			display: inline-block;
+			vertical-align: middle;
+
+			background: #fff;
+			border: 1px solid @altAkcentColor;
+			border-radius: 6px;
+
+			margin-right: 10px;
+			padding: 8px 15px;
+
+			box-sizing: border-box;
+			max-width: 150px;
+
+			text-align: center;
+
+			transition: .3s;
+
+			&::placeholder {
+				display: inline-block;
+				vertical-align: middle;
+
+				font-size: 16px;
+				line-height: 16px;
+				color: @textColor;
+			}
+
+			&:focus {
+				box-shadow: 0 0 2px 2px @akcentColor;
+			}
+		}
+
+		span {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		&--flex {
+			display: flex;
+			flex-direction: column;
+
+
+			align-items: stretch;
+
+			max-width: 240px;
+
+			input {
+				max-width: none;
+				margin-right: 0;
+			}
+		}
+
+	}
+
+	&__result {
+		display: block;
+
+		button {
+			display: inline-block;
+			vertical-align: middle;
+
+			border: none;
+			background-color: transparent;
+
+			font-weight: bold;
+			text-align: left;
+			font-size: 18px;
+			line-height: 20px;
+
+			color: @textColor;
+
+			width: 250px;
+
+			&::after {
+				content: "";
+
+				display: inline-block;
+				vertical-align: middle;
+
+				width: 20px;
+				height: 20px;
+
+				margin-left: 5px;
+
+				background: url(../img/icons/next.svg) center no-repeat;
+				background-size: 125%;
+			}
+		}
+
+		p {
+			display: inline-block;
+			vertical-align: middle;
+
+			width: 250px;
+
+			margin-bottom: 0;
+
+			span {
+				display: inline-block;
+			}
+		}
+	}
+
+	&__btns {
+		text-align: center;
+
+		&-left,
+		&-right {
+			width: 50%;
+			flex: 1 1 50%;
+		}
+	}
+}

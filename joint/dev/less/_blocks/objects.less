@@ -5,6 +5,31 @@
 	padding: 60px 0 30px;
 	background: @greyColor;
 
+	&--alt-colors {
+		background: transparent;
+
+		.objects {
+			&__content {
+				background: @greyColor;
+			}
+
+			&__link {
+				background: transparent;
+				color: @altAkcentColor;
+				border: 1px solid @altAkcentColor;
+
+				&:hover {
+					background: @altAkcentColor;
+					color: #fff;
+				}
+
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+
 	&__wrap {
 		.wrap();
 	}
@@ -12,6 +37,40 @@
 	&__title {
 		.section-header();
 		margin-bottom: 60px;
+	}
+
+	&__sort {
+		display: inline-block;
+		vertical-align: middle;
+
+		font-size: 23px;
+		line-height: 25px;
+		font-weight: bold;
+
+		margin-left: 120px;
+
+		color: @textColor;
+
+		&::after {
+			content: "";
+
+			display: inline-block;
+			vertical-align: middle;
+
+			width: 30px;
+			height: 30px;
+
+			margin-left: 10px;
+
+			background: url(../img/icons/up--active.svg) center no-repeat;
+			background-size: contain;
+
+			transform: rotate(180deg);
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	&__list {
@@ -111,12 +170,14 @@
 
 		&--links {
 			font-weight: bold;
-			color: @textColor;
-
 			margin-bottom: 0;
 
 			li:hover {
 				text-decoration: underline;
+			}
+
+			a {
+				color: @textColor;
 			}
 		}
 	}
@@ -136,6 +197,8 @@
 		color: #fff;
 
 		line-height: 20px;
+
+		transition: .3s;
 
 		&:hover {
 			background: darken(@altAkcentColor, 10%);

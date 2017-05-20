@@ -1,0 +1,64 @@
+section.count
+	.count__wrap
+		h2.count__title
+			| Расчёт ипотеки
+
+	.count__content
+		.count__wrap
+			.count__flex
+				.count__left
+					h3.count__subtitle
+						| Примерный расчёт
+					form.count__form.js--count-form(method="" action="")
+						p
+							| Введите параметры расчёта
+
+						label.count__label
+							| Сумма ипотеки
+							.count__input
+								input(type="number" placeholder="2 000 000" name="sum")
+								span руб.
+
+						label.count__label
+							| Процент кредитования
+							.count__input
+								input(type="number" placeholder="20" name="percent")
+								span %
+
+						label.count__label
+							| Срок ипотеки
+							.count__input
+								input(type="number" placeholder="20" name="time")
+								span лет
+
+						label.count__label
+							| Первоначальный взнос
+							.count__input
+								input(type="number" placeholder="30" name="first")
+								span %
+
+						.count__result
+							button(type="submit") Рассчитать
+							p
+								| Ежемесячный платёж
+								br
+								i.js--count-result 30 000 рублей
+
+				.count__right
+					h3.count__subtitle
+						| Точный расчёт
+					form.count__form.js--order-count(method="" action="")
+						p
+							| Чтобы получить точный расчёт, оставьте заявку
+						.count__input.count__input--mb.count__input--flex
+							input(type="tel" placeholder="+7 (999) 555-55-55" name="tel")
+							button.btn.btn--attention.btn--upper(type="submit") Получить расчёт
+
+	.count__btns
+		.count__wrap.count__wrap--btns
+			.count__btns-left
+				button.btn.btn--big.btn--bold.btn--attention.btn--square.js--show-consult-popup
+					| Получить консультацию по объекту
+			.count__btns-right
+				button.btn.btn--big.btn--upper.btn--square.js--show-buy-popup
+					| Купить квартиру
