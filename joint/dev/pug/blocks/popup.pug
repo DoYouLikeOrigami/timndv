@@ -1,0 +1,79 @@
+.popup.popup--js-call
+	button.popup__close.js--close-popup &#10006;
+	.popup__body
+		p.popup__text
+			| Введите номер&nbsp;телефона и&nbsp;мы&nbsp;перезвоним в&nbsp;течение&nbsp;5&nbsp;минут!
+		form.popup__form(method="post" action="/order-call" data-msg="Ждите звонка!")
+			label
+				input(type="tel" name="tel" placeholder="+7 999 999-99-99")
+			button.btn.btn--attention.btn--bold(type="submit")
+				| Заказать звонок
+
+
+.popup.popup--js-register-seminar
+	button.popup__close.js--close-popup &#10006;
+	.popup__body
+		p.popup__text
+			| Введите контактные&nbsp;данные для&nbsp;регистрации!
+		form.popup__form(method="post" action="/register-seminar" data-msg="Вы успешно зарегистрированы!")
+			label
+				p Имя
+				input(type="text" name="name" placeholder="Как к вам обращаться?")
+			label
+				p Номер&nbsp;телефона
+				input(type="tel" name="tel" placeholder="+7 999 999-99-99")
+			label
+				p Email
+				input(type="email" name="email" placeholder="ivanov@mail.ru")
+			button.btn.btn--attention.btn--bold(type="submit")
+				| Зарегистрироваться на семинар
+
+
+.popup.popup--js-action
+	button.popup__close.js--close-popup &#10006;
+	h4.popup__title.popup__title--action
+		| Акция!
+
+	.popup__body
+		p.popup__text.popup__text--small
+			| Описание акции. Описание акции. Описание акции. Описание акции. Описание акции. Описание акции. Описание акции. Описание акции. Описание акции. Описание акции. Описание акции. Описание акции. Описание акции.
+
+		button.btn.btn--attention.btn--bold.js--close-popup
+			| Понятно!
+
+.popup.popup--js-question
+	button.popup__close.js--close-popup &#10006;
+	.popup__body
+		p.popup__text
+			| Остались&nbsp;вопросы? С&nbsp;радостью ответим!
+		form.popup__form(method="post" action="/question" data-msg="Мы получили ваш вопрос! Скоро ответим!")
+			label
+				p Ваш телефон или почта
+				input(type="text" name="contact" placeholder="ivanov@mail.ru")
+			label
+				p Ваш вопрос
+				textarea(name="msg" placeholder="Напишите ваш вопрос" rows="4")
+			button.btn.btn--attention.btn--bold(type="submit")
+				| Узнать ответ
+
+
+.popup.popup--js-order-get
+	button.popup__close.js--close-popup &#10006;
+	.popup__body
+		p.popup__text
+			| Подберём наилучший&nbsp;вариант!
+		form.popup__form(method="post" action="/order-get" data-msg="Мы получили ваш запрос! Скоро ответим!")
+			label
+				p Ваш телефон
+				input(type="text" name="contact" placeholder="+7 999 999-99-99")
+			label
+				p Ваши пожелания
+				textarea(name="msg" placeholder="Вкратце опишите желаемое" rows="5")
+			button.btn.btn--attention.btn--bold(type="submit")
+				| Оставить заявку
+
+
+.popup.popup--video.popup--js-video
+	button.popup__close.js--close-popup &#10006;
+	.popup__body
+		.popup__video

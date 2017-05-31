@@ -33,6 +33,7 @@ var
       watch: ['./joint/dev/pug/pages/**/*.pug',
       				'./joint/dev/pug/blocks/**/*.pug',
       				'./joint/dev/pug/layouts/**/*.pug',
+      				'./joint/dev/pug/icons/**/*.pug',
       				'./joint/dev/pug/mixins.pug'],
       convertFolder: './joint/templates'
     }

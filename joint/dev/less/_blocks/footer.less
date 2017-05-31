@@ -16,9 +16,10 @@
 
 	&__logo {
 		display: block;
+		color: @textColor;
 
 		&-img {
-			display: none;
+			display: inline-block;
 			vertical-align: middle;
 
 			width: 80px;
@@ -28,21 +29,6 @@
 			img {
 				width: 100%;
 			}
-		}
-
-		//Заглушка картинки на время
-		&::before {
-			content: "";
-
-			display: inline-block;
-			vertical-align: middle;
-
-			width: 80px;
-			height: 80px;
-
-			background-color: @akcentColor;
-
-			margin-right: 20px;
 		}
 
 		&-text {
@@ -81,12 +67,12 @@
 				width: 65px;
 				height: 65px;
 
+				font-size: 0;
+
 				background: center no-repeat;
 				background-size: 190%;
 
 				transition: .3s;
-
-				font-size: 0;
 
 				&:hover {
 					box-shadow: 0 0 2px 2px @altAkcentColor;

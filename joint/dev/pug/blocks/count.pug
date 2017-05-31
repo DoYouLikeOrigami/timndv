@@ -9,32 +9,32 @@ section.count
 				.count__left
 					h3.count__subtitle
 						| Примерный расчёт
-					form.count__form.js--count-form(method="" action="")
+					form.count__form.js--count-form
 						p
 							| Введите параметры расчёта
 
 						label.count__label
 							| Сумма ипотеки
 							.count__input
-								input(type="number" placeholder="2 000 000" name="sum")
+								input(type="number" placeholder="2 000 000" min="0" required name="sum")
 								span руб.
 
 						label.count__label
 							| Процент кредитования
 							.count__input
-								input(type="number" placeholder="20" name="percent")
+								input(type="number" placeholder="20" min="0" required name="percent")
 								span %
 
 						label.count__label
 							| Срок ипотеки
 							.count__input
-								input(type="number" placeholder="20" name="time")
+								input(type="number" placeholder="20" min="0" required name="time")
 								span лет
 
 						label.count__label
 							| Первоначальный взнос
 							.count__input
-								input(type="number" placeholder="30" name="first")
+								input(type="number" placeholder="30" min="0" required name="first")
 								span %
 
 						.count__result

@@ -3,16 +3,17 @@ header.main-header
 
 		.main-header__top
 			.main-header__top-left
-				.main-header__logo
-					img(src="/static/img/logo.jpg" alt="Недвижимость в Санкт-Петербурге и ЛО")
+				a.main-header__logo(href="/")
+					.main-header__logo-img
+						include ../icons/logo.pug
 					h4.main-header__logo-text
-						| Название
+						| ТИМ Недвижимость
 						p
 							| Продажа недвижимости в Санкт-Петербурге и ЛО
 			.main-header__top-right
 				.main-header__tel
-					a(href="tel:+79999999999") +7 (812) 555-55-55
-					button.btn.btn--upper.js--order-call Заказать звонок
+					a(href="tel:+78124018892") +7 (812) 408-18-92
+					button.btn.btn--upper.js--show-call-popup Заказать звонок
 
 		.main-header__bottom
 			nav.main-nav

@@ -1,0 +1,158 @@
+.popup {
+	display: block;
+	position: fixed;
+
+	top: 50%;
+	left: 50%;
+
+	max-height: 100vh;
+
+	transform: translate(-50%, -3000px);
+
+	background: #fff;
+
+	transition: .5s ease-in;
+	will-change: transform;
+
+	z-index: 999;
+
+	text-align: center;
+
+	&--active {
+		transform: translate(-50%, -50%);
+	}
+
+	&--video {
+		.popup__body {
+			padding: 30px;
+		}
+	}
+
+	&--large {
+		overflow-y: scroll;
+	}
+
+	&__body {
+		padding: 60px 30px;
+	}
+
+	&__close {
+		display: block;
+		position: absolute;
+
+		top: 15px;
+		right: 15px;
+
+		font-size: 30px;
+		line-height: 30px;
+
+		color: @textColor;
+
+		transition: .3s;
+
+		border: none;
+		background: none;
+		outline: none;
+
+		cursor: pointer;
+		z-index: 2;
+
+		&:hover {
+			text-shadow: 0 0 10px @akcentColor;
+		}
+	}
+
+	&__title {
+		.section-header();
+		margin-bottom: 30px;
+
+		&--action {
+			padding: 60px 30px;
+			background: @akcentColor;
+
+			margin-bottom: 0;
+		}
+	}
+
+	&__text {
+		font-size: 20px;
+		line-height: 24px;
+		margin-bottom: 30px;
+
+		&--small {
+			font-size: inherit;
+			line-height: inherit;
+		}
+	}
+
+	&__form {
+		display: block;
+
+		label {
+			display: block;
+
+			font-size: 16px;
+			line-height: 20px;
+
+			margin-bottom: 15px;
+
+			p {
+				display: inline-block;
+				vertical-align: top;
+
+				margin-right: 10px;
+				margin-bottom: 0;
+
+				width: 160px;
+				text-align: right;
+			}
+
+			&:last-of-type {
+				margin-bottom: 30px;
+			}
+
+			&:first-of-type {
+				margin-bottom: 15px;
+			}
+		}
+
+		input,
+		textarea {
+			display: inline-block;
+			vertical-align: middle;
+
+			box-sizing: border-box;
+
+			background: #fff;
+			border: 1px solid @altAkcentColor;
+			border-radius: 6px;
+
+			padding: 7px 15px;
+			width: 240px;
+
+			transition: .3s;
+
+			outline: none;
+
+			font-size: 16px;
+			line-height: 20px;
+			text-align: center;
+
+			&::placeholder {
+				color: @textColor;
+			}
+
+			&:focus {
+				box-shadow: 0 0 2px 2px @akcentColor;
+			}
+
+			&:hover {
+				box-shadow: 0 0 1px 1px @akcentColor;
+			}
+		}
+
+		textarea {
+			resize: none;
+		}
+	}
+}

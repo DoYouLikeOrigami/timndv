@@ -93,9 +93,11 @@
 				font-weight: bold;
 				color: @textColor;
 
-				&::after {
-					content: "";
+				span {
+					display: inline-block;
+				}
 
+				i {
 					display: inline-block;
 					vertical-align: middle;
 
@@ -104,24 +106,30 @@
 					width: 25px;
 					height: 25px;
 
-					background: url(../img/icons/eye.svg) center no-repeat;
-					background-size: cover;
+					svg {
+						display: block;
+						width: 100%;
 
-					transition: .3s;
+						path {
+							transition: .3s;
+						}
+					}
 				}
 
 				&:hover {
-					text-decoration: underline;
+					span {
+						text-decoration: underline;
+					}
 
-					&::after {
-						background-image: url(../img/icons/eye--active.svg);
+					i svg path {
+						fill: @akcentColor;
 					}
 				}
 			}
 		}
 
 		&--fixed-span {
-			li span {
+			li > span {
 				width: 70px;
 			}
 		}

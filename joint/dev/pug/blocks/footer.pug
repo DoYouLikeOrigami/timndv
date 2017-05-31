@@ -6,24 +6,27 @@ footer.footer
 		.footer__wrap
 			.footer__flex
 
-				.footer__logo
+				a.footer__logo(href="/")
 					.footer__logo-img
-						img(src="" alt="Название компании")
+						include ../icons/logo.pug
 					.footer__logo-text
 						h3.footer__logo-title
-							| Название компании
+							| ТИМ Недвижимость
 						p.footer__logo-descr
 							| Продажа недвижимости в Санкт-Петербурге и ЛО
 
 				.footer__socials
 					ul.footer__socials-list
 						li.footer__socials-item.footer__socials-item--vk
-							a(href="#") ВКонтакте
-						li.footer__socials-item.footer__socials-item--yt
-							a(href="#") Youtube
+							a(href="#")
+								span ВКонтакте
 						li.footer__socials-item.footer__socials-item--fb
-							a(href="#") Facebook
-					button.btn.btn--attention.btn--upper.js--show-msg-popup Написать письмо
+							a(href="#")
+								span Youtube
+						li.footer__socials-item.footer__socials-item--yt
+							a(href="#")
+								span Facebook
+					button.btn.btn--attention.btn--upper.js--show-question-popup Написать письмо
 
 				.footer__address
 					| Адрес нашего офиса
@@ -31,7 +34,7 @@ footer.footer
 					| Невский пр. 7, офис 3
 
 				.footer__tel
-					a(href="+79995555555")
-						| +7 (812) 555-55-55
+					a(href="+78124018892")
+						| +7 (812) 408-18-92
 					button.btn.btn--upper.js--show-order-get-popup Заявка на подбор
 

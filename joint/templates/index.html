@@ -12,16 +12,35 @@
 		<header class="main-header">
 			<div class="main-header__wrap">
 				<div class="main-header__top">
-					<div class="main-header__top-left">
-						<div class="main-header__logo"><img src="/static/img/logo.jpg" alt="Недвижимость в Санкт-Петербурге и ЛО">
-							<h4 class="main-header__logo-text">Название
+					<div class="main-header__top-left"><a class="main-header__logo" href="/">
+							<div class="main-header__logo-img">
+								<svg class="logo-img" x="0px" y="0px" viewBox="0 0 330 342.7" enable-background="new 0 0 330 342.7" xml:space="preserve">
+									<g>
+										<g>
+											<g>
+												<polygon fill="#125FC5" points="233.4,75 283,75 307.4,32.8 191.2,32.8"></polygon>
+												<polygon fill="#125FC5" points="275.6,117.3 295.8,137.4 307.4,117.3"></polygon>
+												<polygon fill="#125FC5" points="138.9,32.8 82.4,32.8 58,75 96.6,75"></polygon>
+												<polygon fill="#125FC5" points="51.5,222.5 22.6,272.4 67.7,272.4 43.6,314.5 47.3,314.6 95.8,314.6 113.3,284.3"></polygon>
+												<polygon fill="#125FC5" points="186.4,314.6 193.5,314.6 203,298"></polygon>
+											</g>
+											<g>
+												<path fill="#125FC5" d="M191.2,32.8l-5.6-5.6c-11.4-11.4-29.8-11.4-41.2,0l-5.6,5.6H191.2z"></path>
+												<polygon fill="#F4BB2E" points="213.8,194.8 258.6,117.3 275.6,117.3 233.4,75 185.5,75 161.1,117.3 209.8,117.3 165,194.8"></polygon>
+												<path fill="#125FC5" d="M144.9,314.6l-0.2-0.1l44.7-77.4h-48.9l-27.3,47.3l31.1,31.1c11.4,11.4,29.8,11.4,41.2,0l0.8-0.8H144.9z"></path>
+												<path fill="#125FC5" d="M136.6,75H96.6l-75.7,75.7c-11.4,11.4-11.4,29.8,0,41.2l30.5,30.5L136.6,75z"></path>
+												<path fill="#125FC5" d="M309.1,150.7l-13.4-13.4L203,298l106.1-106.1C320.5,180.6,320.5,162.1,309.1,150.7z"></path>
+											</g>
+										</g>
+									</g>
+								</svg>
+							</div>
+							<h4 class="main-header__logo-text">ТИМ Недвижимость
 								<p>Продажа недвижимости в Санкт-Петербурге и ЛО</p>
-							</h4>
-						</div>
-					</div>
+							</h4></a></div>
 					<div class="main-header__top-right">
-						<div class="main-header__tel"><a href="tel:+79999999999">+7 (812) 555-55-55</a>
-							<button class="btn btn--upper js--order-call">Заказать звонок</button>
+						<div class="main-header__tel"><a href="tel:+78124018892">+7 (812) 408-18-92</a>
+							<button class="btn btn--upper js--show-call-popup">Заказать звонок</button>
 						</div>
 					</div>
 				</div>
@@ -40,7 +59,7 @@
 						<li>Осталось 20 мест</li>
 					</ul>
 					<div class="banner__cta">
-						<button class="btn btn--attention btn--bold btn--big btn--mr js--register-seminar">Зарегестрироваться на семинар</button><a class="btn btn--bold btn--big" href="#">Посмотреть отзывы</a>
+						<button class="btn btn--attention btn--bold btn--big btn--mr js--show-register-seminar-popup">Зарегистрироваться на семинар</button><a class="btn btn--bold btn--big" href="#">Посмотреть отзывы</a>
 					</div><a class="banner__video-btn js--show-seminar-video" href="#">Смотреть видео-презентацию</a>
 				</div>
 			</div>
@@ -102,7 +121,7 @@
 								<li><a href="#">3 к. кв. от 3.5 млн. р.</a></li>
 							</ul>
 						</div>
-						<div class="objects__btn"><a class="objects__link" href="#">Подробнее</a></div>
+						<div class="objects__btn"><a class="objects__link" href="/object">Подробнее</a></div>
 					</div>
 					<div class="objects__item"><img class="objects__img" src="./static/img/map/img.jpg" alt="Название объекта" width="305px" height="220px">
 						<div class="objects__content">
@@ -118,7 +137,7 @@
 								<li><a href="#">3 к. кв. от 3.5 млн. р.</a></li>
 							</ul>
 						</div>
-						<div class="objects__btn"><a class="objects__link" href="#">Подробнее</a></div>
+						<div class="objects__btn"><a class="objects__link" href="/object">Подробнее</a></div>
 					</div>
 					<div class="objects__item"><img class="objects__img" src="./static/img/map/img.jpg" alt="Название объекта" width="305px" height="220px">
 						<div class="objects__content">
@@ -134,7 +153,7 @@
 								<li><a href="#">3 к. кв. от 3.5 млн. р.</a></li>
 							</ul>
 						</div>
-						<div class="objects__btn"><a class="objects__link" href="#">Подробнее</a></div>
+						<div class="objects__btn"><a class="objects__link" href="/object">Подробнее</a></div>
 					</div>
 					<div class="objects__item"><img class="objects__img" src="./static/img/map/img.jpg" alt="Название объекта" width="305px" height="220px">
 						<div class="objects__content">
@@ -150,7 +169,7 @@
 								<li><a href="#">3 к. кв. от 3.5 млн. р.</a></li>
 							</ul>
 						</div>
-						<div class="objects__btn"><a class="objects__link" href="#">Подробнее</a></div>
+						<div class="objects__btn"><a class="objects__link" href="/object">Подробнее</a></div>
 					</div>
 					<div class="objects__item"><img class="objects__img" src="./static/img/map/img.jpg" alt="Название объекта" width="305px" height="220px">
 						<div class="objects__content">
@@ -166,14 +185,14 @@
 								<li><a href="#">3 к. кв. от 3.5 млн. р.</a></li>
 							</ul>
 						</div>
-						<div class="objects__btn"><a class="objects__link" href="#">Подробнее</a></div>
+						<div class="objects__btn"><a class="objects__link" href="/object">Подробнее</a></div>
 					</div>
 					<div class="objects__item objects__item--action">
 						<h4 class="objects__item-title">Акция</h4><img class="objects__img" src="./static/img/map/img.jpg" alt="Название объекта" width="305px" height="220px">
 						<div class="objects__content">
 							<p>Текст акции</p>
 						</div>
-						<div class="objects__btn"><a class="objects__link" href="#">Подробнее</a></div>
+						<div class="objects__btn"><a class="objects__link js--show-action-popup" href="#">Подробнее</a></div>
 					</div>
 				</div>
 			</div>
@@ -258,6 +277,24 @@
 				</div>
 			</div>
 		</section>
+		<div class="popup popup--js-partners">
+			<button class="popup__close js--close-popup">&#10006;</button>
+			<div class="popup__body">
+				<h4 class="popup__title">Партнёрство</h4>
+				<p class="popup__text">Есть&nbsp;предложение? Давайте&nbsp;обсудим!</p>
+				<form class="popup__form" method="post" action="/partners" data-msg="Мы получили ваше предложение! Скоро ответим!">
+					<label>
+						<p>Ваш телефон или&nbsp;почта</p>
+						<input type="text" name="contact" placeholder="ivanov@company.ru">
+					</label>
+					<label>
+						<p>Ваше предложение</p>
+						<textarea name="msg" placeholder="Вкратце опишите ваше предложение" rows="5"></textarea>
+					</label>
+					<button class="btn btn--attention btn--bold" type="submit">Отправить предложение</button>
+				</form>
+			</div>
+		</div>
 		<footer class="footer">
 			<section class="footer-search">
 				<div class="footer-search__content">
@@ -285,30 +322,130 @@
 			</nav>
 			<div class="footer__bottom">
 				<div class="footer__wrap">
-					<div class="footer__flex">
-						<div class="footer__logo">
-							<div class="footer__logo-img"><img src="" alt="Название компании"></div>
-							<div class="footer__logo-text">
-								<h3 class="footer__logo-title">Название компании</h3>
-								<p class="footer__logo-descr">Продажа недвижимости в Санкт-Петербурге и ЛО</p>
+					<div class="footer__flex"><a class="footer__logo" href="/">
+							<div class="footer__logo-img">
+								<svg class="logo-img" x="0px" y="0px" viewBox="0 0 330 342.7" enable-background="new 0 0 330 342.7" xml:space="preserve">
+									<g>
+										<g>
+											<g>
+												<polygon fill="#125FC5" points="233.4,75 283,75 307.4,32.8 191.2,32.8"></polygon>
+												<polygon fill="#125FC5" points="275.6,117.3 295.8,137.4 307.4,117.3"></polygon>
+												<polygon fill="#125FC5" points="138.9,32.8 82.4,32.8 58,75 96.6,75"></polygon>
+												<polygon fill="#125FC5" points="51.5,222.5 22.6,272.4 67.7,272.4 43.6,314.5 47.3,314.6 95.8,314.6 113.3,284.3"></polygon>
+												<polygon fill="#125FC5" points="186.4,314.6 193.5,314.6 203,298"></polygon>
+											</g>
+											<g>
+												<path fill="#125FC5" d="M191.2,32.8l-5.6-5.6c-11.4-11.4-29.8-11.4-41.2,0l-5.6,5.6H191.2z"></path>
+												<polygon fill="#F4BB2E" points="213.8,194.8 258.6,117.3 275.6,117.3 233.4,75 185.5,75 161.1,117.3 209.8,117.3 165,194.8"></polygon>
+												<path fill="#125FC5" d="M144.9,314.6l-0.2-0.1l44.7-77.4h-48.9l-27.3,47.3l31.1,31.1c11.4,11.4,29.8,11.4,41.2,0l0.8-0.8H144.9z"></path>
+												<path fill="#125FC5" d="M136.6,75H96.6l-75.7,75.7c-11.4,11.4-11.4,29.8,0,41.2l30.5,30.5L136.6,75z"></path>
+												<path fill="#125FC5" d="M309.1,150.7l-13.4-13.4L203,298l106.1-106.1C320.5,180.6,320.5,162.1,309.1,150.7z"></path>
+											</g>
+										</g>
+									</g>
+								</svg>
 							</div>
-						</div>
+							<div class="footer__logo-text">
+								<h3 class="footer__logo-title">ТИМ Недвижимость</h3>
+								<p class="footer__logo-descr">Продажа недвижимости в Санкт-Петербурге и ЛО</p>
+							</div></a>
 						<div class="footer__socials">
 							<ul class="footer__socials-list">
-								<li class="footer__socials-item footer__socials-item--vk"><a href="#">ВКонтакте</a></li>
-								<li class="footer__socials-item footer__socials-item--yt"><a href="#">Youtube</a></li>
-								<li class="footer__socials-item footer__socials-item--fb"><a href="#">Facebook</a></li>
+								<li class="footer__socials-item footer__socials-item--vk"><a href="#"><span>ВКонтакте</span></a></li>
+								<li class="footer__socials-item footer__socials-item--fb"><a href="#"><span>Youtube</span></a></li>
+								<li class="footer__socials-item footer__socials-item--yt"><a href="#"><span>Facebook</span></a></li>
 							</ul>
-							<button class="btn btn--attention btn--upper js--show-msg-popup">Написать письмо</button>
+							<button class="btn btn--attention btn--upper js--show-question-popup">Написать письмо</button>
 						</div>
 						<div class="footer__address">Адрес нашего офиса<br>Невский пр. 7, офис 3</div>
-						<div class="footer__tel"><a href="+79995555555">+7 (812) 555-55-55</a>
+						<div class="footer__tel"><a href="+78124018892">+7 (812) 408-18-92</a>
 							<button class="btn btn--upper js--show-order-get-popup">Заявка на подбор</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</footer>
+		<div class="popup popup--js-call">
+			<button class="popup__close js--close-popup">&#10006;</button>
+			<div class="popup__body">
+				<p class="popup__text">Введите номер&nbsp;телефона и&nbsp;мы&nbsp;перезвоним в&nbsp;течение&nbsp;5&nbsp;минут!</p>
+				<form class="popup__form" method="post" action="/order-call" data-msg="Ждите звонка!">
+					<label>
+						<input type="tel" name="tel" placeholder="+7 999 999-99-99">
+					</label>
+					<button class="btn btn--attention btn--bold" type="submit">Заказать звонок</button>
+				</form>
+			</div>
+		</div>
+		<div class="popup popup--js-register-seminar">
+			<button class="popup__close js--close-popup">&#10006;</button>
+			<div class="popup__body">
+				<p class="popup__text">Введите контактные&nbsp;данные для&nbsp;регистрации!</p>
+				<form class="popup__form" method="post" action="/register-seminar" data-msg="Вы успешно зарегистрированы!">
+					<label>
+						<p>Имя</p>
+						<input type="text" name="name" placeholder="Как к вам обращаться?">
+					</label>
+					<label>
+						<p>Номер&nbsp;телефона</p>
+						<input type="tel" name="tel" placeholder="+7 999 999-99-99">
+					</label>
+					<label>
+						<p>Email</p>
+						<input type="email" name="email" placeholder="ivanov@mail.ru">
+					</label>
+					<button class="btn btn--attention btn--bold" type="submit">Зарегистрироваться на семинар</button>
+				</form>
+			</div>
+		</div>
+		<div class="popup popup--js-action">
+			<button class="popup__close js--close-popup">&#10006;</button>
+			<h4 class="popup__title popup__title--action">Акция!</h4>
+			<div class="popup__body">
+				<p class="popup__text popup__text--small">Описание акции. Описание акции. Описание акции. Описание акции. Описание акции. Описание акции. Описание акции. Описание акции. Описание акции. Описание акции. Описание акции. Описание акции. Описание акции.</p>
+				<button class="btn btn--attention btn--bold js--close-popup">Понятно!</button>
+			</div>
+		</div>
+		<div class="popup popup--js-question">
+			<button class="popup__close js--close-popup">&#10006;</button>
+			<div class="popup__body">
+				<p class="popup__text">Остались&nbsp;вопросы? С&nbsp;радостью ответим!</p>
+				<form class="popup__form" method="post" action="/question" data-msg="Мы получили ваш вопрос! Скоро ответим!">
+					<label>
+						<p>Ваш телефон или почта</p>
+						<input type="text" name="contact" placeholder="ivanov@mail.ru">
+					</label>
+					<label>
+						<p>Ваш вопрос</p>
+						<textarea name="msg" placeholder="Напишите ваш вопрос" rows="4"></textarea>
+					</label>
+					<button class="btn btn--attention btn--bold" type="submit">Узнать ответ</button>
+				</form>
+			</div>
+		</div>
+		<div class="popup popup--js-order-get">
+			<button class="popup__close js--close-popup">&#10006;</button>
+			<div class="popup__body">
+				<p class="popup__text">Подберём наилучший&nbsp;вариант!</p>
+				<form class="popup__form" method="post" action="/order-get" data-msg="Мы получили ваш запрос! Скоро ответим!">
+					<label>
+						<p>Ваш телефон</p>
+						<input type="text" name="contact" placeholder="+7 999 999-99-99">
+					</label>
+					<label>
+						<p>Ваши пожелания</p>
+						<textarea name="msg" placeholder="Вкратце опишите желаемое" rows="5"></textarea>
+					</label>
+					<button class="btn btn--attention btn--bold" type="submit">Оставить заявку</button>
+				</form>
+			</div>
+		</div>
+		<div class="popup popup--video popup--js-video">
+			<button class="popup__close js--close-popup">&#10006;</button>
+			<div class="popup__body">
+				<div class="popup__video"></div>
+			</div>
+		</div>
 		<div class="overlay"></div>
 		<script src="/static/js/main.js"></script>
 	</body>

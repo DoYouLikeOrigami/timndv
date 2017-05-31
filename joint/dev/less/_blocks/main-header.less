@@ -26,26 +26,12 @@
 	&__logo {
 		display: flex;
 		align-items: flex-end;
+		color: @textColor;
 
-		img {
-			display: none;
-
-			width: 80px;
-
-			margin-right: 20px;
-		}
-
-		//Заглушка картинки на время
-
-		&::before {
-			content: "";
-
+		&-img {
 			display: block;
 
 			width: 80px;
-			height: 80px;
-
-			background-color: @akcentColor;
 
 			margin-right: 20px;
 		}
