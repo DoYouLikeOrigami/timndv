@@ -282,7 +282,7 @@
 			<div class="popup__body">
 				<h4 class="popup__title">Партнёрство</h4>
 				<p class="popup__text">Есть&nbsp;предложение? Давайте&nbsp;обсудим!</p>
-				<form class="popup__form" method="post" action="/partners" data-msg="Мы получили ваше предложение! Скоро ответим!">
+				<form class="popup__form js--form" method="post" action="/partners" data-msg="Мы получили ваше предложение! Скоро ответим!">
 					<label>
 						<p>Ваш телефон или&nbsp;почта</p>
 						<input type="text" name="contact" placeholder="ivanov@company.ru">
@@ -369,7 +369,7 @@
 			<button class="popup__close js--close-popup">&#10006;</button>
 			<div class="popup__body">
 				<p class="popup__text">Введите номер&nbsp;телефона и&nbsp;мы&nbsp;перезвоним в&nbsp;течение&nbsp;5&nbsp;минут!</p>
-				<form class="popup__form" method="post" action="/order-call" data-msg="Ждите звонка!">
+				<form class="popup__form js--form" method="post" action="/order-call" data-msg="Ждите звонка!">
 					<label>
 						<input type="tel" name="tel" placeholder="+7 999 999-99-99">
 					</label>
@@ -381,7 +381,7 @@
 			<button class="popup__close js--close-popup">&#10006;</button>
 			<div class="popup__body">
 				<p class="popup__text">Введите контактные&nbsp;данные для&nbsp;регистрации!</p>
-				<form class="popup__form" method="post" action="/register-seminar" data-msg="Вы успешно зарегистрированы!">
+				<form class="popup__form js--form" method="post" action="/register-seminar" data-msg="Вы успешно зарегистрированы!">
 					<label>
 						<p>Имя</p>
 						<input type="text" name="name" placeholder="Как к вам обращаться?">
@@ -406,11 +406,27 @@
 				<button class="btn btn--attention btn--bold js--close-popup">Понятно!</button>
 			</div>
 		</div>
+		<div class="popup popup--js-success">
+			<button class="popup__close js--close-popup">&#10006;</button>
+			<h4 class="popup__title popup__title--success">У вас получилось!</h4>
+			<div class="popup__body">
+				<p class="popup__text popup__text--small">Всё успешно!</p>
+				<button class="btn btn--attention btn--bold js--close-popup">Понятно!</button>
+			</div>
+		</div>
+		<div class="popup popup--js-error">
+			<button class="popup__close js--close-popup">&#10006;</button>
+			<h4 class="popup__title popup__title--error">Ошибка!</h4>
+			<div class="popup__body">
+				<p class="popup__text popup__text--small">Попробуйте снова!</p>
+				<button class="btn btn--attention btn--bold js--close-popup">Понятно!</button>
+			</div>
+		</div>
 		<div class="popup popup--js-question">
 			<button class="popup__close js--close-popup">&#10006;</button>
 			<div class="popup__body">
 				<p class="popup__text">Остались&nbsp;вопросы? С&nbsp;радостью ответим!</p>
-				<form class="popup__form" method="post" action="/question" data-msg="Мы получили ваш вопрос! Скоро ответим!">
+				<form class="popup__form js--form" method="post" action="/question" data-msg="Мы получили ваш вопрос! Скоро ответим!">
 					<label>
 						<p>Ваш телефон или почта</p>
 						<input type="text" name="contact" placeholder="ivanov@mail.ru">
@@ -427,7 +443,7 @@
 			<button class="popup__close js--close-popup">&#10006;</button>
 			<div class="popup__body">
 				<p class="popup__text">Подберём наилучший&nbsp;вариант!</p>
-				<form class="popup__form" method="post" action="/order-get" data-msg="Мы получили ваш запрос! Скоро ответим!">
+				<form class="popup__form js--form" method="post" action="/order-get" data-msg="Мы получили ваш запрос! Скоро ответим!">
 					<label>
 						<p>Ваш телефон</p>
 						<input type="text" name="contact" placeholder="+7 999 999-99-99">

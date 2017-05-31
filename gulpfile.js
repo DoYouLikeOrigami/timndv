@@ -10,7 +10,9 @@ var
   postcss = require('gulp-postcss'),
   cssnano = require('cssnano'),
   rename = require('gulp-rename'),
-  pug = require('gulp-pug');
+  pug = require('gulp-pug'),
+  uglify = require('gulp-uglify'),
+  concat = require('gulp-concat');
 
 /* --------- paths --------- */
 
@@ -36,6 +38,13 @@ var
       				'./joint/dev/pug/icons/**/*.pug',
       				'./joint/dev/pug/mixins.pug'],
       convertFolder: './joint/templates'
+    },
+    js: {
+    	base: './joint/dev/js/base.js',
+    	files: './joint/dev/js/modules/*.js',
+    	run: './joint/dev/js/run.js',
+    	watch: ['./joint/dev/js/**/*.js'],
+    	convertFolder: './joint/static/js'
     }
   };
 
@@ -73,13 +82,22 @@ gulp.task('pug', function() {
 		.pipe(gulp.dest(paths.pug.convertFolder));
 });
 
+/* --------- js --------- */
+gulp.task('js', function() {
+  gulp.src([paths.js.base, paths.js.files, paths.js.run])
+    .pipe(concat('main.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest(paths.js.convertFolder));
+});
+
 /* --------- watch --------- */
 
-gulp.task('watch', ['style', 'pug'], function () {
+gulp.task('watch', ['style', 'pug', 'js'], function () {
   gulp.watch(paths.style.watch, ['style']);
   gulp.watch(paths.pug.watch, ['pug']);
+  gulp.watch(paths.js.watch, ['js']);
 });
 
 /* --------- default --------- */
 
-gulp.task('default', ['style', 'pug', 'watch']);
+gulp.task('default', ['style', 'pug', 'js', 'watch']);

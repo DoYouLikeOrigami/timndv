@@ -66,11 +66,21 @@
 		.section-header();
 		margin-bottom: 30px;
 
-		&--action {
-			padding: 60px 30px;
+		&--action,
+		&--error,
+		&--success {
+			padding: 45px 30px;
 			background: @akcentColor;
 
 			margin-bottom: 0;
+		}
+
+		&--error {
+			background: @akcentColor;
+		}
+
+		&--success {
+			background: @altAkcentColor;
 		}
 	}
 
