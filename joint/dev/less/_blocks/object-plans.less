@@ -72,8 +72,12 @@
 	}
 
 	&__block {
-		display: block;
+		display: none;
 		padding: 40px 60px 60px;
+
+		&--active {
+			display: block;
+		}
 
 		&-title {
 			.section-header();
@@ -141,6 +145,14 @@
 
 		padding: 100px 0 60px;
 
+		&-content {
+			display: none;
+
+			&--active {
+				display: block;
+			}
+		}
+
 		&-cta {
 			display: block;
 			text-align: center;
@@ -191,8 +203,12 @@
 		}
 
 		&-slider {
-			display: block;
+			display: none;
 			padding: 0 80px;
+
+			&--active {
+				display: block;
+			}
 		}
 
 		&-slider-item {

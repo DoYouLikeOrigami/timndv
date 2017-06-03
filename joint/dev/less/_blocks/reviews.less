@@ -15,12 +15,14 @@
 	}
 
 	&__list {
+		position: relative;
 		list-style-type: none;
+		overflow: hidden;
 	}
 
 	&__item {
 		display: block;
-		position: relative;
+		position: absolute;
 
 		box-sizing: border-box;
 
@@ -28,6 +30,20 @@
 		height: 235px;
 
 		border: 2px solid @altAkcentColor;
+		background: @greyColor;
+
+		transform: translateY(-100%);
+		transition: .45s;
+
+		z-index: 0;
+
+		will-change: transform;
+
+		&--active {
+			position: relative;
+			transform: translateY(0);
+			z-index: 2;
+		}
 	}
 
 	&__watch {

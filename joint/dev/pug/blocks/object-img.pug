@@ -7,16 +7,15 @@ section.object-img
 					.object-img__slider-current
 						img(src="./static/img/object-img/current.jpg" alt="Название объекта")
 
-					ul.object-img__slider-list
-						li.object-img__slider-item
-							a(href="#")
-								img(src="./static/img/object-img/item.jpg" alt="Описание объекта")
-						li.object-img__slider-item
-							a(href="#")
-								img(src="./static/img/object-img/item.jpg" alt="Описание объекта")
-						li.object-img__slider-item
-							a(href="#")
-								img(src="./static/img/object-img/item.jpg" alt="Описание объекта")
+					ul.object-img__slider-list.swiper-container
+						.swiper-wrapper
+							each val in [1, 2, 3, 4, 5, 6]
+								li.object-img__slider-item.swiper-slide
+									a(href="#")
+										img(src=("http://lorempixel.com/800/800/nature/" + val) alt="Описание объекта")
+
+						.swiper-button-next.object-img__slider-next
+						.swiper-button-prev.object-img__slider-prev
 
 			.object-img__right
 				.object-img__map

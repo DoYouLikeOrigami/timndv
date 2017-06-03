@@ -13,27 +13,99 @@ section.search
 			h3.search__content-title
 				| Найдите свой идеальный вариант
 			form.search__form(method="" action="")
-				.search__block
+
+				.search__block.search__block--active
 					.search__block-title
 						| Выберите количество комнат
 					label.search__label
 						span Студия
-						input(type="radio" name="rooms" value="studio")
-					label.search__label.search__label--active
+						input(type="checkbox" name="rooms" value="studio")
+					label.search__label
 						span 1 комната
-						input(type="radio" name="rooms" value="one")
+						input(type="checkbox" name="rooms" value="one")
 					label.search__label
 						span 2 комнаты
-						input(type="radio" name="rooms" value="two")
+						input(type="checkbox" name="rooms" value="two")
 					label.search__label
 						span 3 комнаты
-						input(type="radio" name="rooms" value="three")
+						input(type="checkbox" name="rooms" value="three")
 					label.search__label
 						span Больше 3-ех комнат
-						input(type="radio" name="rooms" value="more")
+						input(type="checkbox" name="rooms" value="more")
 
 					.search__block-btn
-						button Далее
+						button.js--next-btn Далее
+
+				.search__block
+					.search__block-title
+						| Выберите стоимость
+					label.search__label
+						span до 2 млн.
+						input(type="checkbox" name="price" value="2")
+					label.search__label
+						span от 2 до 3 млн.
+						input(type="checkbox" name="price" value="3")
+					label.search__label
+						span от 3 до 4 млн.
+						input(type="checkbox" name="price" value="4")
+					label.search__label
+						span от 4 до 5 млн.
+						input(type="checkbox" name="price" value="5")
+					label.search__label
+						span Больше 5 млн.
+						input(type="checkbox" name="price" value="more")
+
+					.search__block-btn.search__block-btn--two
+						button.search__block-prev-btn.js--prev-btn Назад
+						button.js--next-btn Далее
+
+				.search__block
+					.search__block-title
+						| Выберите район и год сдачи
+					label.search__label
+						select(multiple name="place")
+							option(disabled) Выберите районы
+							option(value="Невский") Невский р-н
+							option(value="Невский") Невский р-н
+							option(value="Невский") Невский р-н
+					label.search__label
+						span 2017 год
+						input(type="checkbox" name="year" value="2017")
+					label.search__label
+						span 2018 год
+						input(type="checkbox" name="year" value="2018")
+					label.search__label
+						span 2019 год
+						input(type="checkbox" name="year" value="2019")
+					label.search__label
+						span 2020 год
+						input(type="checkbox" name="year" value="2020")
+
+					.search__block-btn.search__block-btn--two
+						button.search__block-prev-btn.js--prev-btn Назад
+						button.js--next-btn Далее
+
+				.search__block
+					.search__block-title
+						| Варианты оплаты
+					label.search__label
+						span Рассрочка
+						input(type="checkbox" name="payment" value="Рассрочка")
+					label.search__label
+						span Ипотека
+						input(type="checkbox" name="payment" value="Ипотека")
+					label.search__label
+						span Материнский капитал
+						input(type="checkbox" name="payment" value="Материнский капитал")
+					label.search__label
+						span Военная ипотека
+						input(type="checkbox" name="payment" value="Военная ипотека")
+					label.search__label
+						span Субсидии
+						input(type="checkbox" name="payment" value="Субсидии")
+
+					.search__block-btn.search__block-btn--left
+						button.search__block-prev-btn.js--prev-btn Назад
 
 				.search__results
 					.search__results-number

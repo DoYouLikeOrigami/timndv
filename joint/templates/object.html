@@ -55,10 +55,17 @@
 					<div class="object-img__left">
 						<div class="object-img__slider">
 							<div class="object-img__slider-current"><img src="./static/img/object-img/current.jpg" alt="Название объекта"></div>
-							<ul class="object-img__slider-list">
-								<li class="object-img__slider-item"><a href="#"><img src="./static/img/object-img/item.jpg" alt="Описание объекта"></a></li>
-								<li class="object-img__slider-item"><a href="#"><img src="./static/img/object-img/item.jpg" alt="Описание объекта"></a></li>
-								<li class="object-img__slider-item"><a href="#"><img src="./static/img/object-img/item.jpg" alt="Описание объекта"></a></li>
+							<ul class="object-img__slider-list swiper-container">
+								<div class="swiper-wrapper">
+									<li class="object-img__slider-item swiper-slide"><a href="#"><img src="http://lorempixel.com/800/800/nature/1" alt="Описание объекта"></a></li>
+									<li class="object-img__slider-item swiper-slide"><a href="#"><img src="http://lorempixel.com/800/800/nature/2" alt="Описание объекта"></a></li>
+									<li class="object-img__slider-item swiper-slide"><a href="#"><img src="http://lorempixel.com/800/800/nature/3" alt="Описание объекта"></a></li>
+									<li class="object-img__slider-item swiper-slide"><a href="#"><img src="http://lorempixel.com/800/800/nature/4" alt="Описание объекта"></a></li>
+									<li class="object-img__slider-item swiper-slide"><a href="#"><img src="http://lorempixel.com/800/800/nature/5" alt="Описание объекта"></a></li>
+									<li class="object-img__slider-item swiper-slide"><a href="#"><img src="http://lorempixel.com/800/800/nature/6" alt="Описание объекта"></a></li>
+								</div>
+								<div class="swiper-button-next object-img__slider-next"></div>
+								<div class="swiper-button-prev object-img__slider-prev"></div>
 							</ul>
 						</div>
 					</div>
@@ -316,8 +323,46 @@
 						<div class="object-plans__info">
 							<div class="object-plans__tabs"><a class="object-plans__tabs-item object-plans__tabs-item--active" href="#">25 кв. м.</a><a class="object-plans__tabs-item" href="#">35 кв. м.</a><a class="object-plans__tabs-item" href="#">45 кв. м.</a></div>
 							<div class="object-plans__blocks">
-								<div class="object-plans__block">
+								<div class="object-plans__block--active object-plans__block">
 									<h3 class="object-plans__block-title">ЖК «GREENЛАНДИЯ»<small>2 комнатная кв. 25 кв. м2</small></h3>
+									<ul class="object-plans__block-list">
+										<li><span>Адрес:</span><span>Александровской фермы пр. 72</span></li>
+										<li><span>Метро:</span><span>Пролетарская</span></li>
+									</ul>
+									<ul class="object-plans__block-list object-plans__block-list--bold">
+										<li><span>Стоимость при 100% оплате:</span><span>4234433 руб</span></li>
+										<li><span>Срок сдачи:</span><span>II кв. 2020 г.</span></li>
+									</ul>
+									<ul class="object-plans__block-list object-plans__block-list--distance">
+										<li><span>Корпус:</span><span>Дом 20</span></li>
+										<li><span>Секция:</span><span>3</span></li>
+									</ul>
+									<ul class="object-plans__block-list object-plans__block-list--distance">
+										<li><span>S общая:</span><span>25</span></li>
+										<li><span>S комнат:</span><span>20</span></li>
+									</ul>
+								</div>
+								<div class="object-plans__block">
+									<h3 class="object-plans__block-title">ЖК «GREENЛАНДИЯ»<small>3 комнатная кв. 25 кв. м2</small></h3>
+									<ul class="object-plans__block-list">
+										<li><span>Адрес:</span><span>Александровской фермы пр. 72</span></li>
+										<li><span>Метро:</span><span>Пролетарская</span></li>
+									</ul>
+									<ul class="object-plans__block-list object-plans__block-list--bold">
+										<li><span>Стоимость при 100% оплате:</span><span>4234433 руб</span></li>
+										<li><span>Срок сдачи:</span><span>II кв. 2020 г.</span></li>
+									</ul>
+									<ul class="object-plans__block-list object-plans__block-list--distance">
+										<li><span>Корпус:</span><span>Дом 20</span></li>
+										<li><span>Секция:</span><span>3</span></li>
+									</ul>
+									<ul class="object-plans__block-list object-plans__block-list--distance">
+										<li><span>S общая:</span><span>25</span></li>
+										<li><span>S комнат:</span><span>20</span></li>
+									</ul>
+								</div>
+								<div class="object-plans__block">
+									<h3 class="object-plans__block-title">ЖК «GREENЛАНДИЯ»<small>4 комнатная кв. 25 кв. м2</small></h3>
 									<ul class="object-plans__block-list">
 										<li><span>Адрес:</span><span>Александровской фермы пр. 72</span></li>
 										<li><span>Метро:</span><span>Пролетарская</span></li>
@@ -341,12 +386,41 @@
 							<div class="object-plans__plans-cta">
 								<button class="btn js--show-consult-popup">Получить консультацию по объекту</button>
 							</div>
-							<div class="object-plans__plans-btns">
-								<button class="object-plans__plans-btns-item object-plans__plans-btns-item--active">Квартира</button>
-								<button class="object-plans__plans-btns-item">Поэтажная планировка</button>
+							<div class="object-plans__plans-content object-plans__plans-content--active">
+								<div class="object-plans__plans-btns">
+									<button class="object-plans__plans-btns-item object-plans__plans-btns-item--active">Квартира</button>
+									<button class="object-plans__plans-btns-item">Поэтажная планировка</button>
+								</div>
+								<div class="object-plans__plans-slider--active object-plans__plans-slider">
+									<div class="object-plans__plans-slider-item"><img src="" alt=""></div>
+								</div>
+								<div class="object-plans__plans-slider">
+									<div class="object-plans__plans-slider-item"><img src="" alt=""></div>
+								</div>
 							</div>
-							<div class="object-plans__plans-slider">
-								<div class="object-plans__plans-slider-item"><img src="" alt=""></div>
+							<div class="object-plans__plans-content">
+								<div class="object-plans__plans-btns">
+									<button class="object-plans__plans-btns-item object-plans__plans-btns-item--active">Квартира</button>
+									<button class="object-plans__plans-btns-item">Поэтажная планировка</button>
+								</div>
+								<div class="object-plans__plans-slider--active object-plans__plans-slider">
+									<div class="object-plans__plans-slider-item"><img src="" alt=""></div>
+								</div>
+								<div class="object-plans__plans-slider">
+									<div class="object-plans__plans-slider-item"><img src="" alt=""></div>
+								</div>
+							</div>
+							<div class="object-plans__plans-content">
+								<div class="object-plans__plans-btns">
+									<button class="object-plans__plans-btns-item object-plans__plans-btns-item--active">Квартира</button>
+									<button class="object-plans__plans-btns-item">Поэтажная планировка</button>
+								</div>
+								<div class="object-plans__plans-slider--active object-plans__plans-slider">
+									<div class="object-plans__plans-slider-item"><img src="" alt=""></div>
+								</div>
+								<div class="object-plans__plans-slider">
+									<div class="object-plans__plans-slider-item"><img src="" alt=""></div>
+								</div>
 							</div>
 						</div>
 					</div>

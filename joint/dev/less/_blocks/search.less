@@ -104,11 +104,39 @@
 		}
 	}
 
-	&__form {}
+	&__form {
+		display: block;
+		position: relative;
+
+		overflow: hidden;
+	}
 
 	&__block {
 		display: block;
+		position: absolute;
+
+		top: 0;
+		left: 0;
+
+		width: 100%;
+
 		margin-bottom: 30px;
+
+		transform: translateX(200%);
+		transition: .45s;
+
+		background: #fff;
+
+		will-change: transform;
+
+		&--active {
+			position: relative;
+			transform: translateX(0);
+		}
+
+		&--visited {
+			transform: translateX(-200%);
+		}
 
 		&-title {
 			font-size: 23px;
@@ -123,6 +151,15 @@
 
 			text-align: right;
 			margin-top: 30px;
+
+			&--two {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			&--left {
+				text-align: left;
+			}
 
 			button {
 				display: inline-block;
@@ -152,6 +189,29 @@
 
 				&:hover {
 					text-decoration: underline;
+				}
+			}
+
+			.search__block-prev-btn {
+				font-weight: normal;
+
+				&::before {
+					content: "";
+
+					display: inline-block;
+					vertical-align: middle;
+
+					width: 23px;
+					height: 23px;
+
+					background: url(../img/icons/next.svg) center no-repeat;
+					background-size: 150%;
+
+					transform: rotate(180deg);
+				}
+
+				&::after {
+					display: none;
 				}
 			}
 		}
@@ -247,3 +307,14 @@
 		}
 	}
 }
+
+
+.loop(@counter) when (@counter < 9) {
+	.loop((@counter + 1));
+
+	.search__block:nth-of-type(@{counter}) {
+		z-index: @counter;
+	}
+}
+
+.loop(0);

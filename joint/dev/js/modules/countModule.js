@@ -49,9 +49,9 @@ var countModule = (function () {
 	var _countAction = function (sum, percent, time, first) {
 		var result;
 
-		result = (sum - sum * first / 100) / time * percent / 100;
+		result = (sum - sum * first / 100) * (percent / 100) / 12 / (1 - Math.pow((1 + percent / 100 / 12), ((-1) * time * 12) ));
 
-		return result;
+		return Math.ceil(result);
 	};
 
 	var _countUpdate = function (result) {

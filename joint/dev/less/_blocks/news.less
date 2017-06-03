@@ -154,6 +154,7 @@
 
 	&__content {
 		display: block;
+		position: relative;
 		box-sizing: border-box;
 
 		width: 55%;
@@ -163,9 +164,27 @@
 		padding: 30px 15px 15px;
 
 		background: @greyColor;
+
+		overflow: hidden;
 	}
 
 	&__article {
+		display: block;
+		position: absolute;
+
+		transform: translateY(150%);
+		transition: .45s;
+
+		will-change: transform;
+
+		z-index: 0;
+
+		&--active {
+			position: relative;
+			transform: translateY(0);
+			z-index: 2;
+		}
+
 		&-title {
 			display: block;
 

@@ -74,25 +74,95 @@
 					<div class="search__step"><span class="search__step-curr">1</span><span class="search__step-of">&nbsp;/ 4</span></div>
 					<h3 class="search__content-title">Найдите свой идеальный вариант</h3>
 					<form class="search__form" method="" action="">
-						<div class="search__block">
+						<div class="search__block search__block--active">
 							<div class="search__block-title">Выберите количество комнат</div>
 							<label class="search__label"><span>Студия</span>
-								<input type="radio" name="rooms" value="studio">
+								<input type="checkbox" name="rooms" value="studio">
 							</label>
-							<label class="search__label search__label--active"><span>1 комната</span>
-								<input type="radio" name="rooms" value="one">
+							<label class="search__label"><span>1 комната</span>
+								<input type="checkbox" name="rooms" value="one">
 							</label>
 							<label class="search__label"><span>2 комнаты</span>
-								<input type="radio" name="rooms" value="two">
+								<input type="checkbox" name="rooms" value="two">
 							</label>
 							<label class="search__label"><span>3 комнаты</span>
-								<input type="radio" name="rooms" value="three">
+								<input type="checkbox" name="rooms" value="three">
 							</label>
 							<label class="search__label"><span>Больше 3-ех комнат</span>
-								<input type="radio" name="rooms" value="more">
+								<input type="checkbox" name="rooms" value="more">
 							</label>
 							<div class="search__block-btn">
-								<button>Далее</button>
+								<button class="js--next-btn">Далее</button>
+							</div>
+						</div>
+						<div class="search__block">
+							<div class="search__block-title">Выберите стоимость</div>
+							<label class="search__label"><span>до 2 млн.</span>
+								<input type="checkbox" name="price" value="2">
+							</label>
+							<label class="search__label"><span>от 2 до 3 млн.</span>
+								<input type="checkbox" name="price" value="3">
+							</label>
+							<label class="search__label"><span>от 3 до 4 млн.</span>
+								<input type="checkbox" name="price" value="4">
+							</label>
+							<label class="search__label"><span>от 4 до 5 млн.</span>
+								<input type="checkbox" name="price" value="5">
+							</label>
+							<label class="search__label"><span>Больше 5 млн.</span>
+								<input type="checkbox" name="price" value="more">
+							</label>
+							<div class="search__block-btn search__block-btn--two">
+								<button class="search__block-prev-btn js--prev-btn">Назад</button>
+								<button class="js--next-btn">Далее</button>
+							</div>
+						</div>
+						<div class="search__block">
+							<div class="search__block-title">Выберите район и год сдачи</div>
+							<label class="search__label">
+								<select multiple name="place">
+									<option disabled>Выберите районы</option>
+									<option value="Невский">Невский р-н</option>
+									<option value="Невский">Невский р-н</option>
+									<option value="Невский">Невский р-н</option>
+								</select>
+							</label>
+							<label class="search__label"><span>2017 год</span>
+								<input type="checkbox" name="year" value="2017">
+							</label>
+							<label class="search__label"><span>2018 год</span>
+								<input type="checkbox" name="year" value="2018">
+							</label>
+							<label class="search__label"><span>2019 год</span>
+								<input type="checkbox" name="year" value="2019">
+							</label>
+							<label class="search__label"><span>2020 год</span>
+								<input type="checkbox" name="year" value="2020">
+							</label>
+							<div class="search__block-btn search__block-btn--two">
+								<button class="search__block-prev-btn js--prev-btn">Назад</button>
+								<button class="js--next-btn">Далее</button>
+							</div>
+						</div>
+						<div class="search__block">
+							<div class="search__block-title">Варианты оплаты</div>
+							<label class="search__label"><span>Рассрочка</span>
+								<input type="checkbox" name="payment" value="Рассрочка">
+							</label>
+							<label class="search__label"><span>Ипотека</span>
+								<input type="checkbox" name="payment" value="Ипотека">
+							</label>
+							<label class="search__label"><span>Материнский капитал</span>
+								<input type="checkbox" name="payment" value="Материнский капитал">
+							</label>
+							<label class="search__label"><span>Военная ипотека</span>
+								<input type="checkbox" name="payment" value="Военная ипотека">
+							</label>
+							<label class="search__label"><span>Субсидии</span>
+								<input type="checkbox" name="payment" value="Субсидии">
+							</label>
+							<div class="search__block-btn search__block-btn--left">
+								<button class="search__block-prev-btn js--prev-btn">Назад</button>
 							</div>
 						</div>
 						<div class="search__results">
@@ -224,7 +294,7 @@
 				<nav class="news__nav">
 					<h3 class="news__title">Новости рынка</h3>
 					<ul class="news__list">
-						<li class="news__item news__item--active"><a href="#">Минстрой РФ издал указ для развития конкуренции на строительном рынке</a></li>
+						<li class="news__item--active news__item"><a href="#">Минстрой РФ издал указ для развития конкуренции на строительном рынке</a></li>
 						<li class="news__item"><a href="#">Минстрой РФ издал указ для развития конкуренции на строительном рынке</a></li>
 						<li class="news__item"><a href="#">Минстрой РФ издал указ для развития конкуренции на строительном рынке</a></li>
 						<li class="news__item"><a href="#">Минстрой РФ издал указ для развития конкуренции на строительном рынке</a></li>
@@ -232,6 +302,18 @@
 					<div class="news__pagination"><a class="news__pagination-back" href="#">Назад</a><a class="news__pagination-fow" href="#">Вперед</a></div>
 				</nav>
 				<div class="news__content">
+					<article class="news__article--active news__article">
+						<h4 class="news__article-title">Минстрой РФ издал указ для развития конкуренции на строительном рынке</h4>
+						<p class="news__article-preview">Минстрой РФ издал указ для развития конкуренции на строительном рынке. Минстрой РФ издал указ для развития конкуренции на строительном рынке. Минстрой РФ издал указ для развития конкуренции на строительном рынке.</p><a class="btn btn--upper" href="#">Читать далее</a>
+					</article>
+					<article class="news__article">
+						<h4 class="news__article-title">Минстрой РФ издал указ для развития конкуренции на строительном рынке</h4>
+						<p class="news__article-preview">Минстрой РФ издал указ для развития конкуренции на строительном рынке. Минстрой РФ издал указ для развития конкуренции на строительном рынке. Минстрой РФ издал указ для развития конкуренции на строительном рынке.</p><a class="btn btn--upper" href="#">Читать далее</a>
+					</article>
+					<article class="news__article">
+						<h4 class="news__article-title">Минстрой РФ издал указ для развития конкуренции на строительном рынке</h4>
+						<p class="news__article-preview">Минстрой РФ издал указ для развития конкуренции на строительном рынке. Минстрой РФ издал указ для развития конкуренции на строительном рынке. Минстрой РФ издал указ для развития конкуренции на строительном рынке.</p><a class="btn btn--upper" href="#">Читать далее</a>
+					</article>
 					<article class="news__article">
 						<h4 class="news__article-title">Минстрой РФ издал указ для развития конкуренции на строительном рынке</h4>
 						<p class="news__article-preview">Минстрой РФ издал указ для развития конкуренции на строительном рынке. Минстрой РФ издал указ для развития конкуренции на строительном рынке. Минстрой РФ издал указ для развития конкуренции на строительном рынке.</p><a class="btn btn--upper" href="#">Читать далее</a>
@@ -243,10 +325,13 @@
 					<h3 class="reviews__title">Отзывы о нашей работе</h3>
 					<div class="reviews__flex">
 						<ul class="reviews__list">
-							<li class="reviews__item"><a class="reviews__watch js--show-video" href="#">Смотреть отзыв</a></li>
+							<li class="reviews__item--active reviews__item"><a class="reviews__watch js--show-video" href="#">Смотреть отзыв 1</a></li>
+							<li class="reviews__item"><a class="reviews__watch js--show-video" href="#">Смотреть отзыв 2</a></li>
+							<li class="reviews__item"><a class="reviews__watch js--show-video" href="#">Смотреть отзыв 3</a></li>
+							<li class="reviews__item"><a class="reviews__watch js--show-video" href="#">Смотреть отзыв 4</a></li>
 						</ul>
 						<ul class="reviews__switch">
-							<li><a class="reviews__btn reviews__btn--active" href="#">Ревью 1</a></li>
+							<li><a class="reviews__btn--active reviews__btn" href="#">Ревью 1</a></li>
 							<li><a class="reviews__btn" href="#">Ревью 2</a></li>
 							<li><a class="reviews__btn" href="#">Ревью 3</a></li>
 							<li><a class="reviews__btn" href="#">Ревью 4</a></li>

@@ -15,6 +15,8 @@ var mainModule = (function () {
 		popupModule.init();
 		countModule.init();
 		formsModule.init();
+		sliderModule.init();
+		searchModule.init();
 	};
 
 	return {
