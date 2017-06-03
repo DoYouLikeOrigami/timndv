@@ -1,0 +1,23 @@
+.popup.popup--js-consult
+	button.popup__close.js--close-popup &#10006;
+	.popup__body
+		p.popup__text
+			| Введите номер&nbsp;телефона и&nbsp;мы&nbsp;договоримся о&nbsp;времени и&nbsp;месте консультации!
+		form.popup__form.js--form(method="post" action="/consult" data-msg="Сейчас перезвоним!")
+			label
+				input(type="tel" name="tel" placeholder="+7 999 999-99-99")
+			button.btn.btn--attention.btn--bold(type="submit")
+				| Получить консультацию
+
+.popup.popup--js-buy
+	button.popup__close.js--close-popup &#10006;
+	.popup__body
+		p.popup__text
+			| Введите номер&nbsp;телефона и&nbsp;мы&nbsp;позвоним для&nbsp;уточнения деталей!
+		form.popup__form.js--form(method="post" action="/buy" data-msg="Ждите звонка!")
+			label
+				input(type="tel" name="tel" placeholder="+7 999 999-99-99")
+			input(type="hidden" value="Наименование объекта")
+			button.btn.btn--attention.btn--bold(type="submit")
+				| Оставить заявку на покупку
+

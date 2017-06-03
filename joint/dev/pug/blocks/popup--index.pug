@@ -1,0 +1,16 @@
+.popup.popup--js-partners
+	button.popup__close.js--close-popup &#10006;
+	.popup__body
+		h4.popup__title
+			| Партнёрство
+		p.popup__text
+			| Есть&nbsp;предложение? Давайте&nbsp;обсудим!
+		form.popup__form.js--form(method="post" action="/partners" data-msg="Мы получили ваше предложение! Скоро ответим!")
+			label
+				p Ваш телефон или&nbsp;почта
+				input(type="text" name="contact" placeholder="ivanov@company.ru")
+			label
+				p Ваше предложение
+				textarea(name="msg" placeholder="Вкратце опишите ваше предложение" rows="5")
+			button.btn.btn--attention.btn--bold(type="submit")
+				| Отправить предложение
