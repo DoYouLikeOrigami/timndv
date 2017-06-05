@@ -12,11 +12,19 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		@media @tablet {
+			flex-wrap: wrap;
+		}
 	}
 
 	&__logo {
 		display: block;
 		color: @textColor;
+
+		@media @laptop {
+			display: none;
+		}
 
 		&-img {
 			display: inline-block;
@@ -48,6 +56,16 @@
 		display: flex;
 		flex-direction: column;
 		align-items: stretch;
+
+		@media @laptop {
+			flex: 0 0 33%;
+			align-items: center;
+		}
+
+		@media @mobile {
+			flex: 0 0 100%;
+			margin-bottom: 30px;
+		}
 
 		&-list {
 			display: flex;
@@ -93,8 +111,33 @@
 		}
 	}
 
+	&__address {
+		@media @laptop {
+			flex: 0 0 33%;
+			text-align: center;
+			min-width: 230px;
+		}
+
+		@media @mobile {
+			flex: 0 0 100%;
+			margin-bottom: 30px;
+		}
+	}
+
 	&__tel {
 		text-align: right;
+
+		@media @laptop {
+			flex: 0 0 33%;
+			text-align: center;
+			min-width: 230px;
+			margin-top: 30px;
+		}
+
+		@media @mobile {
+			flex: 0 0 100%;
+			margin-top: 0;
+		}
 
 		& > a {
 			.section-header();

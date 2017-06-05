@@ -4,6 +4,15 @@
 	justify-content: center;
 	align-items: center;
 
+	@media @tablet {
+		overflow-x: scroll;
+		justify-content: flex-start;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
 	&__item {
 		display: block;
 		position: relative;
@@ -12,6 +21,34 @@
 		margin-right: 45px;
 
 		color: @textColor;
+
+		@media @tablet {
+			margin-right: 30px;
+			padding: 10px 0;
+
+			font-size: 16px;
+			line-height: 20px;
+
+			flex: 0 0;
+
+			&--bigger {
+				flex: 0 0 210px;
+			}
+
+			&:last-of-type {
+				margin-right: 15px;
+			}
+		}
+
+		@media @mobile {
+			padding: 5px 0;
+
+			font-size: 14px;
+
+			&--bigger {
+				flex: 0 0 185px;
+			}
+		}
 
 		&:last-of-type {
 			margin-right: 0;
@@ -40,6 +77,10 @@
 
 		&--attention::after {
 			width: 40px;
+
+			@media @mobile {
+				width: 0;
+			}
 		}
 	}
 }

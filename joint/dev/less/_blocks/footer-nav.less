@@ -4,18 +4,62 @@
 	padding: 35px 0;
 	background-color: @greyColor;
 
+	@media @tablet {
+		padding: 15px 0;
+	}
+
 	&__list {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 
 		list-style-type: none;
+
+		@media @tablet {
+			overflow-x: scroll;
+			justify-content: flex-start;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
 	}
 
-	&__item a {
-		font-size: 21px;
-		line-height: 25px;
-		color: @textColor;
+	&__item {
+		a {
+			font-size: 21px;
+			line-height: 25px;
+			color: @textColor;
+
+			@media @laptop {
+				font-size: 16px;
+				line-height: 20px;
+			}
+
+			@media @mobile {
+				font-size: 14px;
+			}
+		}
+
+		@media @tablet {
+			flex: 0 0;
+
+			margin-right: 30px;
+
+			&:last-of-type {
+				margin-right: 15px;
+			}
+		}
+
+		&--bigger {
+			@media @tablet {
+				flex: 0 0 210px;
+			}
+
+			@media @mobile {
+				flex: 0 0 185px;
+			}
+		}
 
 		&:hover {
 			text-decoration: underline;

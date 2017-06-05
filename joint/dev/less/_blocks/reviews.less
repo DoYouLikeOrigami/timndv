@@ -3,10 +3,22 @@
 	flex-direction: column;
 	justify-content: flex-end;
 
+	@media @tablet {
+		padding: 45px 15px;
+	}
+
+	@media @mobile {
+		padding: 30px 15px;
+	}
+
 	&__title {
 		.section-header();
 		margin-bottom: 35px;
 		line-height: 1;
+
+		@media @mobile {
+			margin-bottom: 30px;
+		}
 	}
 
 	&__flex {
@@ -39,6 +51,26 @@
 
 		will-change: transform;
 
+		@media @laptop {
+			width: 240px;
+			height: 200px;
+		}
+
+		@media @tablet {
+			width: 305px;
+			height: 235px;
+		}
+
+		@media @mobile {
+			width: 270px;
+			height: 210px;
+		}
+
+		@media @mobileSm {
+			width: 240px;
+			height: 200px;
+		}
+
 		&--active {
 			position: relative;
 			transform: translateY(0);
@@ -57,6 +89,22 @@
 	&__switch {
 		list-style-type: none;
 		margin-left: 40px;
+
+		@media @laptop {
+			margin-left: 20px;
+		}
+
+		@media @tablet {
+			margin-left: 40px;
+		}
+
+		@media @mobile {
+			margin-left: 30px;
+		}
+
+		@media @mobileSm {
+			margin-left: 20px;
+		}
 
 		li {
 			margin-bottom: 25px;

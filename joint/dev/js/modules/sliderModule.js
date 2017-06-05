@@ -61,7 +61,14 @@ var sliderModule = (function () {
 		var objectImgSwiper = new Swiper('.object-img .swiper-container', {
         slidesPerView: 3,
         nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev'
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 0,
+        breakpoints: {
+    			480: {
+      			slidesPerView: 2,
+      			spaceBetween: 20
+    			}
+    		}
     });
 	};
 
