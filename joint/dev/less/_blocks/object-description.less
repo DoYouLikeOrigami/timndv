@@ -1,6 +1,14 @@
 .object-description {
 	display: block;
 
+	@media @tablet {
+		padding: 45px 0 0;
+	}
+
+	@media @mobile {
+		padding: 30px 0 0;
+	}
+
 	&__wrap {
 		.wrap();
 	}
@@ -8,14 +16,37 @@
 	&__title {
 		.section-header();
 		margin-bottom: 45px;
+
+		@media @mobile {
+			margin-bottom: 30px;
+		}
 	}
 
 	&__text {
 		p {
 			margin-bottom: 30px;
 
+			@media @tablet {
+				display: none;
+				margin-bottom: 0;
+
+				font-size: 16px;
+			}
+
+			&:first-of-type {
+				display: block;
+				margin-bottom: 30px;
+			}
+
 			&:last-of-type {
 				margin-bottom: 0;
+			}
+		}
+
+		&--shown p {
+			@media @tablet {
+				display: block;
+				margin-bottom: 30px;
 			}
 		}
 	}

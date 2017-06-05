@@ -4,8 +4,24 @@
 
 	padding: 60px 0 0;
 
-	background: url(../img/company/bg-left.svg) left -420px no-repeat, url(../img/company/bg-right.svg) right -420px no-repeat;
+	background: url(../img/company/bg-left.svg) left -420px no-repeat, url(../img/company/bg-right.svg) right -423px no-repeat;
 	background-size: 600px;
+
+	@media @laptop {
+		background: url(../img/company/bg-left.svg) -15px -150px no-repeat, url(../img/company/bg-right.svg) 103% -150px no-repeat;
+		background-size: 400px;
+	}
+
+	@media @tablet {
+		padding: 45px 0 0;
+		background: url(../img/company/bg-left.svg) -15px -238px no-repeat;
+		background-size: 400px;
+	}
+
+	@media @mobile {
+		padding: 30px 0 0;
+		background: none;
+	}
 
 	&__wrap {
 		.wrap();
@@ -24,6 +40,15 @@
 		margin: 0 auto;
 		text-align: justifyCenter;
 		max-width: 400px;
+
+		@media @tablet {
+			font-size: 16px;
+			line-height: 20px;
+		}
+
+		@media @mobile {
+			text-align: center;
+		}
 	}
 
 	&__video {
@@ -31,6 +56,18 @@
 
 		padding: 80px 0;
 		text-align: center;
+
+		@media @laptop {
+			padding: 60px 0;
+		}
+
+		@media @tablet {
+			padding: 45px 0;
+		}
+
+		@media @mobile {
+			padding: 30px 0;
+		}
 
 		&-play {
 			.play-btn();
