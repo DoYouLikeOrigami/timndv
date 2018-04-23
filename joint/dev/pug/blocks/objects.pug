@@ -1,7 +1,7 @@
 section.objects
 	.objects__wrap
 		h2.objects__title
-			| Популярные варианты
+			span Популярные варианты
 		.objects__list
 
 			.objects__item
@@ -14,7 +14,9 @@ section.objects
 						li Сроки сдачи
 					ul.objects__info.objects__info--links
 						li
-							a(href="#") Студии от 1.5 млн. р.
+							form(method="get" action="/object")
+								input(type="hidden" name="popup" value="0")
+								button.objects__info-link(type="submit") Студии от 1.5 млн. р.
 						li
 							a(href="#") 2 к. кв. от 2.5 млн. р.
 						li

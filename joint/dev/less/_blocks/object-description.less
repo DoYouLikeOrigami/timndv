@@ -1,12 +1,28 @@
 .object-description {
 	display: block;
 
+	&--margin-bottom {
+		margin-bottom: 60px;
+
+		@media @tablet {
+			margin-bottom: 45px;
+		}
+
+		@media @mobile {
+			margin-bottom: 30px;
+		}
+	}
+
 	@media @tablet {
 		padding: 45px 0 0;
 	}
 
 	@media @mobile {
 		padding: 30px 0 0;
+	}
+
+	&--news {
+		margin-bottom: 30px;
 	}
 
 	&__wrap {
@@ -23,18 +39,24 @@
 	}
 
 	&__text {
+		h2 {
+			margin-bottom: 30px;
+		}
+
 		p {
 			margin-bottom: 30px;
+			transition: .4s;
 
 			@media @tablet {
-				display: none;
+				height: 0;
+				overflow: hidden;
 				margin-bottom: 0;
 
 				font-size: 16px;
 			}
 
 			&:first-of-type {
-				display: block;
+				height: auto;
 				margin-bottom: 30px;
 			}
 
@@ -45,9 +67,44 @@
 
 		&--shown p {
 			@media @tablet {
-				display: block;
+				height: auto;
 				margin-bottom: 30px;
+
+				&:last-of-type {
+					margin-bottom: 30px;
+				}
 			}
+		}
+
+		&--visible {
+			p {
+				@media @tablet {
+					height: auto;
+				}
+			}
+		}
+
+		ol, ul {
+			padding-left: 20px;
+			margin-bottom: 30px;
+
+			li {
+				margin-bottom: 15px;
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	&__btn {
+		display: none;
+
+		text-align: center;
+
+		@media @tablet {
+			display: block;
 		}
 	}
 }

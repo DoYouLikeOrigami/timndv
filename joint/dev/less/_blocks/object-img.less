@@ -2,10 +2,10 @@
 	display: block;
 	position: relative;
 
-	padding: 30px 0 60px;
+	padding: 0 0 60px;
 
-	@media @mobile {
-		padding: 30px 0;
+	@media @tablet {
+		padding: 0 0 30px;
 	}
 
 	&__wrap {
@@ -15,7 +15,7 @@
 	&__flex {
 		display: flex;
 
-		@media @mobile {
+		@media @laptop {
 			flex-wrap: wrap;
 		}
 	}
@@ -28,7 +28,14 @@
 
 		margin-right: 14px;
 
-		@media @mobile {
+		@media @laptop {
+			width: 69%;
+			flex: 1 1 69%;
+
+			margin-bottom: 25px;
+		}
+
+		@media @tablet {
 			width: 100%;
 			flex: 1 1 100%;
 
@@ -44,7 +51,12 @@
 		width: 382px;
 		flex: 1 1 382px;
 
-		@media @mobile {
+		@media @laptop {
+			width: 30%;
+			flex: 1 1 30%;
+		}
+
+		@media @tablet {
 			width: 100%;
 			flex: 1 1 100%;
 		}
@@ -58,22 +70,61 @@
 			height: 392px;
 			margin-bottom: 25px;
 
-			background: @greyColor;
-
 			overflow: hidden;
 
+			@media @laptop {
+				height: 300px;
+			}
+
+			@media @tablet {
+				height: 240px;
+			}
+
 			@media @mobile {
+				height: 180px;
+			}
+
+			@media @mobileSm {
 				height: 130px;
+			}
+
+			figure {
+				display: block;
+				position: absolute;
+
+				height: 100%;
+
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+
+				&::before {
+					content: "";
+
+					display: block;
+					position: absolute;
+
+					right: -1px;
+					top: 0;
+
+					width: 40px;
+					height: 40px;
+
+					background: url(../img/icons/logo.png) center no-repeat, #fff;
+					background-size: contain;
+
+					z-index: 3;
+
+					@media @mobile {
+						width: 25px;
+						height: 25px;
+					}
+				}
 			}
 
 			img {
 				display: block;
-				position: absolute;
-
-				width: 100%;
-
-				top: 50%;
-				transform: translateY(-50%);
+				height: 100%;
 			}
 		}
 
@@ -99,6 +150,11 @@
 				transition: .3s;
 
 				overflow: hidden;
+
+				@media @laptop {
+					width: 180px;
+					height: 100px;
+				}
 
 				@media @mobile {
 					width: 130px;
@@ -149,8 +205,19 @@
 
 		overflow: hidden;
 
-		@media @mobile {
+		@media @laptop {
+			height: 300px;
+		}
+
+		@media @tablet {
 			height: 240px;
+		}
+
+		@media @mobile {
+			height: 180px;
+		}
+
+		@media @mobile {
 			margin-bottom: 30px;
 		}
 

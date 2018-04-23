@@ -1,0 +1,11 @@
+extends ../layouts/base
+
+block seo
+	title Предоставляемые услуги по недвижимости | timndv
+	meta(name="description" content="Описание")
+
+block main-content
+	include ../blocks/services.pug
+
+	a.tablet-call(href="tel:+78124081892")
+		i.fa.fa-phone(aria-hidden="true")

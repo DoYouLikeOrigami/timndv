@@ -4,14 +4,18 @@ html(lang="ru")
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width")
 		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+		link(rel="icon", href="/favicon.ico", type="image/x-icon")
 
 		link(rel="stylesheet", href="/static/css/style.min.css")
+		script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
 
 		block seo
 
 	body
+		include ../blocks/topper.pug
 		include ../blocks/header.pug
 		block main-content
+		include ../blocks/tablet-search.pug
 		include ../blocks/footer.pug
 		include ../blocks/popup.pug
 

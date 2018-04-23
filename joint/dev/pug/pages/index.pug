@@ -1,15 +1,19 @@
 extends ../layouts/base
 
 block seo
-	title Заголовок
+	title Продажа недвижимости в Санкт-Петербурге и ЛО | timndv
 	meta(name="description" content="Описание")
 
 block main-content
+	include ../blocks/tablet-search.pug
 	include ../blocks/banner.pug
 	include ../blocks/search.pug
 	include ../blocks/objects.pug
-	include ../blocks/services.pug
+	include ../blocks/services-demo.pug
 	include ../blocks/news.pug
 	include ../blocks/company.pug
 	include ../blocks/partners.pug
 	include ../blocks/popup--index.pug
+
+	a.tablet-call(href="tel:+78124081892")
+		i.fa.fa-phone(aria-hidden="true")

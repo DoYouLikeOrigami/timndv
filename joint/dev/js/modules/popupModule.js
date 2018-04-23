@@ -5,10 +5,11 @@ var popupModule = (function () {
 	};
 
 	var _vars = {
-		popups : ['order', 'call', 'register-seminar', 'action', 'question', 'order-get', 'partners', 'consult', 'buy', 'plans'],
+		popups : ['order', 'call', 'register-seminar', 'seminar', 'action', 'question', 'order-get', 'partners', 'consult', 'buy', 'plans-0', 'plans-1', 'plans-2', 'plans-3', 'plans-4', 'search'],
 		successPopupClass : '.popup--js-success',
 		errorPopupClass : '.popup--js-error',
-		popupTextClass : '.popup__text'
+		popupTextClass : '.popup__text',
+		servicePopupClass : '.popup__text'
 	};
 
 	var _setUpListeners = function () {
@@ -17,6 +18,7 @@ var popupModule = (function () {
 	var _defaultRun = function () {
 		_popupsBindClose();
 		_popupsBindOpen();
+		_bindServicePopup();
 	};
 
 	var _showPopup = function (popup) {
@@ -24,7 +26,7 @@ var popupModule = (function () {
 		// а потом показываем этот, чтобы не было багов
 		if (_hidePopup()) {
 			if (!popup) {
-				return false
+				return false;
 			};
 
 			var overlay = document.querySelector('.overlay');
@@ -59,6 +61,8 @@ var popupModule = (function () {
 		if (popups) {
 			Array.prototype.forEach.call(popups, function(popup, index) {
 				var hideBtns = popup.querySelectorAll('.js--close-popup');
+
+				if (!hideBtns) return;
 
 				Array.prototype.forEach.call(hideBtns, function(hideBtn, index) {
 					hideBtn.addEventListener('click', function(e) {
@@ -95,7 +99,7 @@ var popupModule = (function () {
 	var _popupsBindOpen = function () {
 
 		for (var number in _vars.popups) {
-			if (document.querySelector('.popup--js-' + _vars.popups[number])) {
+			if (document.querySelector('.popup--js-' + _vars.popups[number]) && document.querySelector('.js--show-' + _vars.popups[number] +'-popup')) {
 				_bindPopup(_vars.popups[number]);
 			};
 		};
@@ -123,10 +127,38 @@ var popupModule = (function () {
 		return _showPopup(succPopup);
 	};
 
+	var _bindServicePopup = function () {
+		var btns = document.querySelectorAll('.js--show-service-popup'),
+				popup = document.querySelector('.popup--js-service'),
+				infoInput = popup.querySelector('input[type="hidden"]');
+
+		if (!btns || !popup) return false;
+
+		Array.prototype.forEach.call(btns, function(btn, index) {
+			btn.addEventListener('click', function(e) {
+				e.preventDefault();
+
+				var info = btn.dataset.info;
+				infoInput.value = info;
+
+				_showPopup(popup);
+			});
+		});
+
+		return true;
+	};
+
+	var show = function (class) {
+		var popup = document.querySelector(class);
+
+		return _showPopup(popup);
+	};
+
 	return {
 		init: init,
 		showError: showError,
-		showSuccess: showSuccess
+		showSuccess: showSuccess,
+		showPopup: show
 	};
 
 })();

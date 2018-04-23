@@ -67,6 +67,7 @@
 		button.btn.btn--attention.btn--bold.js--close-popup
 			| Понятно!
 
+
 .popup.popup--js-question
 	button.popup__close.js--close-popup &#10006;
 	.popup__body
@@ -103,3 +104,131 @@
 	button.popup__close.js--close-popup &#10006;
 	.popup__body
 		.popup__video
+
+
+.popup.popup--js-search
+	button.popup__close.js--close-popup &#10006;
+	.popup__body
+		h4.popup__title
+			| Поиск недвижимости
+		.search.search--mobile
+			.search__content
+				.search__step
+					span.search__step-curr 1
+					span.search__step-of
+						| &nbsp;/ 4
+
+				form.search__form(method="" action="")
+					.search__block.search__block--active
+						.search__block-title
+							| Выберите количество комнат
+						label.search__label
+							span Студия
+							input(type="checkbox" name="rooms" value="studio")
+						label.search__label
+							span 1 комната
+							input(type="checkbox" name="rooms" value="one")
+						label.search__label
+							span 2 комнаты
+							input(type="checkbox" name="rooms" value="two")
+						label.search__label
+							span 3 комнаты
+							input(type="checkbox" name="rooms" value="three")
+						label.search__label
+							span Больше 3-ех комнат
+							input(type="checkbox" name="rooms" value="more")
+
+						.search__block-btn
+							button.js--next-btn Далее
+
+					.search__block
+						.search__block-title
+							| Выберите стоимость
+						label.search__label
+							span до 2 млн.
+							input(type="checkbox" name="price" value="2")
+						label.search__label
+							span от 2 до 3 млн.
+							input(type="checkbox" name="price" value="3")
+						label.search__label
+							span от 3 до 4 млн.
+							input(type="checkbox" name="price" value="4")
+						label.search__label
+							span от 4 до 5 млн.
+							input(type="checkbox" name="price" value="5")
+						label.search__label
+							span Больше 5 млн.
+							input(type="checkbox" name="price" value="more")
+
+						.search__block-btn.search__block-btn--two
+							button.search__block-prev-btn.js--prev-btn Назад
+							button.js--next-btn Далее
+
+					.search__block
+						.search__block-title
+							| Выберите район и год сдачи
+						label.search__label-select
+							select(name="place" size="1")
+								option(value="") Выберите районы
+								option(value="Невский") Невский р-н
+								option(value="Невский") Невский р-н
+								option(value="Невский") Невский р-н
+						label.search__label
+							span 2017 год
+							input(type="checkbox" name="year" value="2017")
+						label.search__label
+							span 2018 год
+							input(type="checkbox" name="year" value="2018")
+						label.search__label
+							span 2019 год
+							input(type="checkbox" name="year" value="2019")
+						label.search__label
+							span 2020 год
+							input(type="checkbox" name="year" value="2020")
+
+						.search__block-btn.search__block-btn--two
+							button.search__block-prev-btn.js--prev-btn Назад
+							button.js--next-btn Далее
+
+					.search__block
+						.search__block-title
+							| Варианты оплаты
+						label.search__label
+							span Рассрочка
+							input(type="checkbox" name="payment" value="Рассрочка")
+						label.search__label
+							span Ипотека
+							input(type="checkbox" name="payment" value="Ипотека")
+						label.search__label
+							span Материнский капитал
+							input(type="checkbox" name="payment" value="Материнский капитал")
+						label.search__label
+							span Военная ипотека
+							input(type="checkbox" name="payment" value="Военная ипотека")
+						label.search__label
+							span Субсидии
+							input(type="checkbox" name="payment" value="Субсидии")
+
+						.search__block-btn.search__block-btn--left
+							button.search__block-prev-btn.js--prev-btn Назад
+
+					.search__results
+						.search__results-number
+							span Подобрано
+							span.js--results-number 256
+							span вариантов
+						button.btn.btn--upper(type="submit") Показать
+
+
+.popup.popup--js-service
+	button.popup__close.js--close-popup &#10006;
+	.popup__body
+		p.popup__text
+			| Введите номер&nbsp;телефона. Мы&nbsp;перезвоним, проконсультируем и,&nbsp;при решении работать с&nbsp;нами, договоримся о&nbsp;дальнейших шагах.
+		form.popup__form.js--form(method="post" action="/order" data-msg="Ждите звонка!")
+			label
+				input(type="tel" name="tel" placeholder="+7 999 999-99-99")
+			input(type="hidden" name="info")
+			button.btn.btn--attention.btn--bold(type="submit")
+				| Получить консультацию
+

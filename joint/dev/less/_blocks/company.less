@@ -4,17 +4,17 @@
 
 	padding: 60px 0 0;
 
-	background: url(../img/company/bg-left.svg) left -420px no-repeat, url(../img/company/bg-right.svg) right -423px no-repeat;
+	background: url(../img/company/bg-left.png) left -409px no-repeat, url(../img/company/bg-right.png) right -412px no-repeat;
 	background-size: 600px;
 
 	@media @laptop {
-		background: url(../img/company/bg-left.svg) -15px -150px no-repeat, url(../img/company/bg-right.svg) 103% -150px no-repeat;
+		background: url(../img/company/bg-left.png) -15px -150px no-repeat, url(../img/company/bg-right.png) 103% -150px no-repeat;
 		background-size: 400px;
 	}
 
 	@media @tablet {
 		padding: 45px 0 0;
-		background: url(../img/company/bg-left.svg) -15px -238px no-repeat;
+		background: url(../img/company/bg-left.png) -15px -238px no-repeat;
 		background-size: 400px;
 	}
 
@@ -38,8 +38,8 @@
 	&__descr {
 		display: block;
 		margin: 0 auto;
-		text-align: justifyCenter;
-		max-width: 400px;
+		text-align: justify;
+		max-width: 480px;
 
 		@media @tablet {
 			font-size: 16px;
@@ -48,6 +48,11 @@
 
 		@media @mobile {
 			text-align: center;
+		}
+
+		&:nth-of-type(2) {
+			padding: 15px 0;
+			background: rgba(255, 255, 255, .7);
 		}
 	}
 

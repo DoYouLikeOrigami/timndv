@@ -33,8 +33,9 @@ var formsModule = (function () {
 						method = form.method,
 						action = form.action,
 						succMsg = form.dataset.msg,
-						tel = false,
+						contact = false,
 						email = false,
+						info = false,
 						msg = form.querySelector(_vars.msgClass) || false,
 						json;
 
@@ -45,33 +46,40 @@ var formsModule = (function () {
 
 				Array.prototype.forEach.call(inputs, function(input, index) {
 
-					if (input.name === 'tel') {
-						tel = input.value;
+					if (input.name === 'contact') {
+						contact = input.value;
 					};
 
 					if (input.name === 'email') {
 						email = input.value;
 					};
+
+					if (input.name === 'info') {
+						info = input.value;
+					};
 				});
 
 				if (msg) msg = msg.value;
 
-				if (!tel && !email) {
+				if (!contact && !email) {
 					console.error('Ошибка в formsModule._formsBindSubmit: у формы ' + form + ' не заполнены контактные данные.');
 					popupModule.showError('Пожалуйста, введите ваши контактные данные!');
 					return false;
 				};
 
-				if (!tel) tel = 'Не заполнено';
+				if (!contact) contact = 'Не заполнено';
 				if (!email) email = 'Не заполнено';
 				if (!msg) msg = 'Не заполнено';
+				if (!info) info = 'Не заполнено';
 
 				json = {
-					tel: tel,
+					contact: contact,
 					email: email,
+					info: info,
 					msg: msg
 				};
 
+				console.log(json, method, action, succMsg)
 				_sendAction(json, method, action, succMsg);
 
 				return true;

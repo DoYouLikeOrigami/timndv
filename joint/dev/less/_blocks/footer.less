@@ -6,6 +6,10 @@
 	&__bottom {
 		display: block;
 		padding: 25px 0;
+
+		@media @mobile {
+			padding-bottom: 75px;
+		}
 	}
 
 	&__flex {
@@ -65,49 +69,6 @@
 		@media @mobile {
 			flex: 0 0 100%;
 			margin-bottom: 30px;
-		}
-
-		&-list {
-			display: flex;
-			justify-content: space-between;
-
-			list-style-type: none;
-
-			margin-bottom: 10px;
-		}
-
-		&-item {
-			display: block;
-
-			a {
-				display: block;
-
-				width: 65px;
-				height: 65px;
-
-				font-size: 0;
-
-				background: center no-repeat;
-				background-size: 190%;
-
-				transition: .3s;
-
-				&:hover {
-					box-shadow: 0 0 2px 2px @altAkcentColor;
-				}
-			}
-
-			&--vk a {
-				background-image: url(../img/icons/vk.svg);
-			}
-
-			&--fb a {
-				background-image: url(../img/icons/fb.svg);
-			}
-
-			&--yt a {
-				background-image: url(../img/icons/yt.svg);
-			}
 		}
 	}
 

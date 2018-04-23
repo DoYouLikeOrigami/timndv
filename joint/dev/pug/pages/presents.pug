@@ -1,0 +1,33 @@
+extends ../layouts/base
+
+block seo
+	title Бонусы для покупателей | timndv
+	meta(name="description" content="Описание")
+
+block main-content
+	section.services.services--no-pt
+		.services__wrap
+			h1.services__title
+				| Бонусы для покупателей
+
+			ul.services__list.services__list--big
+				li.services__item
+					.services__img
+						img(src="./static/img/presents/action.jpg" alt="Акции")
+					h4.services__item-title
+						| Акции
+					p.services__descr
+						| Каждый месяц наши покупатели получают уникальные скидки и подарки!
+					a.btn(href="#") Подробнее
+
+				li.services__item
+					.services__img
+						img(src="./static/img/presents/present.jpg" alt="Подарки")
+					h4.services__item-title
+						| Подарки от партнёров
+					p.services__descr
+						| Если скажете, что пришли через нас, получите скидку. Мы гарантируем качественное предоставление услуг.
+					a.btn(href="#") Подробнее
+
+	a.tablet-call(href="tel:+78124081892")
+		i.fa.fa-phone(aria-hidden="true")

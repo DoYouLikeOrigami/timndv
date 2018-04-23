@@ -1,5 +1,5 @@
-.popup.popup--large.popup--js-plans
-	button.popup__close.js--close-popup &#10006;
+.popup.popup--large.popup--full.popup--js-plans-0
+	button.popup__close.popup__close--bottom.js--close-popup &#10006;
 	.object-plans
 		.object-plans__wrap
 			.object-plans__flex
@@ -8,19 +8,30 @@
 
 					.object-plans__tabs
 						a.object-plans__tabs-item.object-plans__tabs-item--active(href="#")
-							| 25 кв. м.
+							span 25 кв. м.
+							span от 2 234 433 руб
+							span 2 кв. 2020 г.
 						a.object-plans__tabs-item(href="#")
-							| 35 кв. м.
+							span 35 кв. м.
+							span от 3 234 433 руб
+							span 3 кв. 2020 г.
 						a.object-plans__tabs-item(href="#")
-							| 45 кв. м.
+							span 45 кв. м.
+							span от 4 234 433 руб
+							span 4 кв. 2020 г.
 
 					.object-plans__blocks
+
 						each val in [2, 3, 4]
 							div(class=(val == 2 ? 'object-plans__block--active' : '')).object-plans__block
 								h3.object-plans__block-title
 									| ЖК «GREENЛАНДИЯ»
 									small
 										| #{val} комнатная кв. 25 кв. м2
+
+								.object-plans__info-btn
+									button.btn.btn--attention.js--show-plans-info
+										| Показать информацию
 
 								ul.object-plans__block-list
 									li
@@ -29,22 +40,6 @@
 									li
 										span Метро:
 										span Пролетарская
-
-								ul.object-plans__block-list.object-plans__block-list--bold
-									li
-										span Стоимость при 100% оплате:
-										span 4234433 руб
-									li
-										span Срок сдачи:
-										span II кв. 2020 г.
-
-								ul.object-plans__block-list.object-plans__block-list--distance
-									li
-										span Корпус:
-										span Дом 20
-									li
-										span Секция:
-										span 3
 
 								ul.object-plans__block-list.object-plans__block-list--distance
 									li
@@ -62,13 +57,17 @@
 					each val in [2, 3, 4]
 						.object-plans__plans-content(class = (val == 2 ? 'object-plans__plans-content--active' : ''))
 							.object-plans__plans-btns
-								button.object-plans__plans-btns-item.object-plans__plans-btns-item--active Квартира
-								button.object-plans__plans-btns-item Поэтажная планировка
+								button.object-plans__plans-btns-item.object-plans__plans-btns-item--active.js--show-room Квартира
+								button.object-plans__plans-btns-item.js--show-floor Поэтажная планировка
 
-							each val in [2, 3]
-								div(class = (val == 2 ? 'object-plans__plans-slider--active' : '')).object-plans__plans-slider
+
+							.object-plans__plans-slider.object-plans__plans-slider--active.js--room-slider
 									.object-plans__plans-slider-item
-										img(src="" alt="")
+										img(src="/static/images/pylkovskiy/k2_39m.jpg" alt="")
+
+							.object-plans__plans-slider.js--floor-slider
+									.object-plans__plans-slider-item
+										img(src="/static/images/pylkovskiy/k2_39m f.jpg" alt="")
 
 
 

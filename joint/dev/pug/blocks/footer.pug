@@ -16,25 +16,16 @@ footer.footer
 							| Продажа недвижимости в Санкт-Петербурге и ЛО
 
 				.footer__socials
-					ul.footer__socials-list
-						li.footer__socials-item.footer__socials-item--vk
-							a(href="#")
-								span ВКонтакте
-						li.footer__socials-item.footer__socials-item--fb
-							a(href="#")
-								span Youtube
-						li.footer__socials-item.footer__socials-item--yt
-							a(href="#")
-								span Facebook
+					include socials.pug
 					button.btn.btn--attention.btn--upper.js--show-question-popup Написать письмо
 
 				.footer__address
 					| Адрес нашего офиса
 					br
-					| Невский пр. 7, офис 3
+					| Владимирский пр. 23
 
 				.footer__tel
-					a(href="+78124018892")
+					a(href="tel:+78124081892")
 						| +7 (812) 408-18-92
 					button.btn.btn--upper.js--show-order-get-popup Заявка на подбор
 

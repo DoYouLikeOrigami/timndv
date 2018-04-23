@@ -1,7 +1,7 @@
 extends ../layouts/base
 
 block seo
-	title Заголовок
+	title Квартиры в ЖК BauHaus СПб
 	meta(name="description" content="Описание")
 
 block main-content
@@ -9,8 +9,27 @@ block main-content
 	include ../blocks/object-content.pug
 	include ../blocks/object-description.pug
 	include ../blocks/count.pug
+
+	.count__btns
+		.count__wrap.count__wrap--btns
+			.count__btns-left
+				button.btn.btn--big.btn--bold.btn--attention.btn--square.js--show-consult-popup
+					| Получить консультацию по объекту
+			.count__btns-right
+				button.btn.btn--big.btn--upper.btn--square.js--show-buy-popup
+					| Купить квартиру
+
 	include ../blocks/objects--object.pug
 	include ../blocks/popup--object.pug
 	include ../blocks/object-plans.pug
 	include ../blocks/object-action.pug
+
+	.tablet-bottom
+		.tablet-bottom__flex
+			.tablet-bottom__item
+				a.js--show-consult-popup(href="#")
+					| Консультация
+			.tablet-bottom__item.tablet-bottom__item--action
+				a.js--show-action-popup(href="#")
+					| Акция
 

@@ -1,0 +1,46 @@
+.topper {
+	display: block;
+	position: fixed;
+
+	top: 0;
+	left: 0;
+
+	width: 100%;
+
+	transform: translateY(-105%);
+	transition: .3s;
+	will-change: transform;
+
+	box-shadow: 2.5px 4.33px 5px 0px rgba(0, 0, 0, 0.153);
+	background-color: #fff;
+
+	z-index: 9;
+
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: bold;
+
+	&--visible {
+		transform: translateY(0);
+	}
+
+	&__wrap {
+		.wrap();
+
+		display: flex;
+		justify-content: space-between;
+
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	span {
+		@media @tablet {
+			display: none;
+		}
+	}
+
+	a {
+		color: @textColor;
+	}
+}

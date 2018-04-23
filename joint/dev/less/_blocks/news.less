@@ -108,6 +108,7 @@
 
 	&__title {
 		.section-header();
+
 		margin-bottom: 40px;
 		max-width: 340px;
 
@@ -126,14 +127,11 @@
 
 		@media @tablet {
 			display: flex;
-			overflow-x: scroll;
 
 			flex: 1 1 100%;
 			max-width: 100%;
 
-			&::-webkit-scrollbar {
-				display: none;
-			}
+			.overflow-x();
 		}
 	}
 
@@ -182,7 +180,7 @@
 
 			margin-right: 25px;
 
-			background: url(../img/icons/plus.svg) center no-repeat;
+			background: url(../img/icons/plus.png) center no-repeat;
 			background-size: 150%;
 
 			@media @laptop {
@@ -205,7 +203,7 @@
 			border-bottom: 1px solid @akcentColor;
 
 			&::before {
-				background-image: url(../img/icons/minus.svg);
+				background-image: url(../img/icons/minus.png);
 			}
 		}
 	}
@@ -242,13 +240,13 @@
 
 			margin-right: 5px;
 
-			background: url(../img/icons/up.svg) center no-repeat;
+			background: url(../img/icons/up.png) center no-repeat;
 			background-size: 150%;
 
 			transition: .3s;
 
 			&:hover {
-				background-image: url(../img/icons/up--active.svg);
+				background-image: url(../img/icons/up--active.png);
 			}
 		}
 
@@ -305,8 +303,13 @@
 			font-size: 23px;
 			line-height: 25px;
 			font-weight: bold;
+			color: @textColor;
 
 			margin-bottom: 30px;
+
+			&:hover {
+				text-decoration: underline;
+			}
 
 			@media @tablet {
 				font-size: 20px;

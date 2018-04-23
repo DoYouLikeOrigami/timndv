@@ -2,7 +2,11 @@
 	display: block;
 	position: relative;
 
-	margin-bottom: 20px;
+	margin-bottom: 45px;
+
+	@media @mobile {
+		margin-bottom: 20px;
+	}
 
 	&__wrap {
 		.wrap();
@@ -14,72 +18,92 @@
 
 	&__top {
 		display: flex;
-		align-items: stretch;
+		justify-content: space-between;
+		align-items: center;
 
-		padding: 30px 0 50px;
-
-		@media @laptop {
-			padding-bottom: 30px;
-		}
+		padding: 30px 0;
 
 		@media @tablet {
-			padding-bottom: 45px;
 			padding-right: 15px;
 		}
 
 		@media @mobile {
 			flex-wrap: wrap;
-			padding-bottom: 30px;
+			padding-bottom: 0;
 		}
 	}
 
-	&__top-left,
-	&__top-right {
+	&__item {
 		display: block;
-
-		width: 50%;
-		flex: 1 1 50%;
 
 		@media @mobile {
 			width: 100%;
 			flex: 1 1 100%;
+
+			margin-bottom: 30px;
+		}
+
+		&:nth-of-type(2) {
+			margin-bottom: 15px;
+		}
+
+		p {
+			display: block;
+			font-weight: normal;
+
+			text-align: center;
+
+			font-size: 18px;
+			line-height: 1.5;
+
+			@media @laptop {
+				font-size: 16px;
+			}
+
+			@media @tablet {
+				margin-top: 5px;
+			}
 		}
 	}
 
 	&__logo {
-		display: flex;
-		align-items: flex-end;
+		display: block;
 		color: @textColor;
+
+		p {
+			text-align: left;
+		}
+	}
+
+	&__logo-top {
+		display: flex;
+		align-items: center;
 
 		@media @laptop {
 			align-items: flex-start;
 		}
+	}
 
-		@media @mobile {
-			margin-bottom: 30px;
+	&__logo-img {
+		display: block;
+
+		width: 80px;
+		max-width: 80px;
+
+		margin-right: 20px;
+
+		@media @laptop {
+			flex: 1 0 80px;
 		}
 
-		&-img {
-			display: block;
+		@media @tablet {
+			flex: 1 0 60px;
+		}
 
-			width: 80px;
-			max-width: 80px;
-
-			margin-right: 20px;
-
-			@media @laptop {
-				flex: 1 0 80px;
-			}
-
-			@media @tablet {
-				flex: 1 0 60px;
-			}
-
-			@media @mobile {
-				flex: 1 0 40px;
-				margin-right: 10px;
-				max-width: 60px;
-			}
+		@media @mobile {
+			flex: 1 0 40px;
+			margin-right: 10px;
+			max-width: 60px;
 		}
 	}
 
@@ -88,6 +112,7 @@
 
 		.section-header();
 		margin-bottom: 0;
+		line-height: 1;
 
 		@media @tablet {
 			flex: 1 1 300px;
@@ -100,22 +125,8 @@
 			flex: 1 1 230px;
 		}
 
-		p {
+		span {
 			display: block;
-			font-weight: normal;
-
-			font-size: 18px;
-			line-height: 1.5;
-
-			margin-top: 10px;
-
-			@media @laptop {
-				font-size: 16px;
-			}
-
-			@media @tablet {
-				margin-top: 5px;
-			}
 		}
 	}
 
@@ -128,6 +139,8 @@
 	}
 
 	&__tel {
+		text-align: right;
+
 		& > a {
 			.section-header();
 			color: @textColor;
@@ -141,6 +154,8 @@
 		}
 
 		@media @mobile {
+			text-align: center;
+
 			& > a {
 				margin-bottom: 0;
 			}
