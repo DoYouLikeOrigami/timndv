@@ -2,15 +2,41 @@ section.footer-search
 	.footer-search__content
 		h3.footer-search__title
 			| Поиск недвижимости
-		ul.footer-search__list
-			li.footer-search__item
-				a(href="#") Район
-			li.footer-search__item
-				a(href="#") Метро
-			li.footer-search__item
-				a(href="#") Застройщики
-			li.footer-search__item
-				a(href="#") Год сдачи
-			li.footer-search__item
-				a(href="#") Способы покупки
+		.footer-search__wrap
+			ul.footer-search__list
+				li.footer-search__item
+					a(href="#") Район
+				li.footer-search__item
+					a(href="#") Метро
+				li.footer-search__item
+					a(href="#") Год сдачи
+				li.footer-search__item
+					a(href="#") Способы покупки
+
+			.footer-search__options
+				each i in [2, 3, 4, 5]
+					ul.footer-search__options-list
+						each val in [2, 3, 4, 5, 6]
+							li
+								form.footer-search__options-form(method="GET" action="search")
+									input(type="hidden" name="place" value="Невский")
+									button(type="submit") Невский р-н
+
+							li
+								form.footer-search__options-form(method="GET" action="search")
+									input(type="hidden" name="place" value="Московский")
+									button(type="submit") Московский р-н
+
+							li
+								form.footer-search__options-form(method="GET" action="search")
+									input(type="hidden" name="place" value="Фрунзенский")
+									button(type="submit") Фрунзенский р-н
+
+							li
+								form.footer-search__options-form(method="GET" action="search")
+									input(type="hidden" name="place" value="Кировский")
+									button(type="submit") Кировский р-н
+
+
+
 		img.footer-search__decor-img(src="./static/img/search/bg.png" alt="Поиск недвижимости")

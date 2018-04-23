@@ -5,7 +5,8 @@ section.object-img
 			.object-img__left
 				.object-img__slider
 					.object-img__slider-current
-						img(src="./static/img/object-img/current.jpg" alt="Название объекта")
+						figure
+							img(src="./static/images/bauhaus/banners/1.jpg" alt="Название объекта")
 
 					ul.object-img__slider-list.swiper-container
 						.swiper-wrapper
@@ -18,7 +19,6 @@ section.object-img
 						.swiper-button-prev.object-img__slider-prev
 
 			.object-img__right
-				.object-img__map
-					img(src="./static/img/object-img/map.jpg")
+				#map.object-img__map(data-x="59.82135121151628" data-y="30.326299667358402" data-hint="Название")
 				button.btn.btn--attention.btn--upper.btn--big.btn--attention-line.btn--no-pl-pr.js--show-consult-popup
 					| Получить консультацию по объекту

@@ -1,0 +1,17 @@
+extends ../layouts/base
+
+block seo
+	title Лучшие варианты квартир в СПб и ЛО
+	meta(name="description" content="Описание")
+
+block main-content
+	include ../blocks/objects--best.pug
+
+	.tablet-bottom
+		.tablet-bottom__flex
+			.tablet-bottom__item
+				a.js--show-consult-popup(href="#")
+					| Консультация
+			.tablet-bottom__item.tablet-bottom__item--action
+				a.js--show-action-popup(href="#")
+					| Акция

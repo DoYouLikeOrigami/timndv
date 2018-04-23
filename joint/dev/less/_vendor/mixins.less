@@ -46,7 +46,7 @@
 
 	border-radius: 50%;
 
-	background: url(../img/icons/play-btn.svg) center no-repeat;
+	background: url(../img/icons/play-btn.png) center no-repeat;
 	background-size: contain;
 
 	transition: .3s;
@@ -71,17 +71,30 @@
 	}
 }
 
-.beautiful-scrollbar {
+.beautiful-scrollbar() {
 	&::-webkit-scrollbar {
-		width: 1em;
-    background-color: @greyColor;
-	}
-
-	&::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	  width: 1em;
+	  box-shadow: inset 2.5px 4.33px 5px 0px rgba(0, 0, 0, 0.153);
 	}
 
 	&::-webkit-scrollbar-thumb {
-  	background-color: rgba(49,190,248,.5);
+	  background-color: @greyColor;
+	  outline: 1px solid @greyColor;
+	}
+}
+
+.overflow-x() {
+	overflow-x: scroll;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	&::after {
+		content: "";
+
+		display: block;
+		width: 1px;
+		flex: 0 0 1px;
 	}
 }

@@ -16,9 +16,25 @@ TELEGRAM_CHAT = '140008955'
 def index():
 		return render_template('index.html')
 
+@joint.route('/object/list')
+def object_list():
+		return render_template('object-list.html')
+
 @joint.route('/object')
 def object():
 		return render_template('object.html')
+
+@joint.route('/ipoteka')
+def ipoteka():
+		return render_template('ipoteka.html')
+
+@joint.route('/uslugi')
+def services():
+		return render_template('services.html')
+
+@joint.route('/presents')
+def presents():
+		return render_template('presents.html')
 
 # Эту используем
 @joint.route('/order', methods=['POST'])

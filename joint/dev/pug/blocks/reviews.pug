@@ -3,11 +3,10 @@ section.reviews
 		| Отзывы о нашей работе
 	.reviews__flex
 		ul.reviews__list
-			each val in [1, 2, 3, 4]
-				li(class=(val == 1 ? 'reviews__item--active' : '')).reviews__item
-					a(href="#").reviews__watch.js--show-video Смотреть отзыв #{val}
+			li.reviews__item--active.reviews__item
+				iframe(src="//vk.com/video_ext.php?oid=-133568552&id=456239017&hash=cf7d528439d66265&sd" width="305" height="235" frameborder="0" allowfullscreen)
+				//a(href="#").reviews__watch.js--show-video Смотреть отзыв
 
 		ul.reviews__switch
-			each val in [1, 2, 3, 4]
-				li
-					a(class=(val == 1 ? 'reviews__btn--active' : '') href="#").reviews__btn Ревью #{val}
+			li
+				a.reviews__btn--active.reviews__btn Ревью

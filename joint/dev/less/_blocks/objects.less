@@ -57,6 +57,12 @@
 		@media @mobile {
 			margin-bottom: 30px;
 		}
+
+		span {
+			@media @tablet {
+				display: block;
+			}
+		}
 	}
 
 	&__sort {
@@ -71,6 +77,35 @@
 
 		color: @textColor;
 
+		@media @tablet {
+			font-size: 20px;
+			line-height: 20px;
+			font-weight: normal;
+
+			margin-left: 60px;
+			margin-top: 15px;
+
+			border-radius: 3px;
+
+			padding: 5px 15px;
+
+			background: @greyColor;
+		}
+
+		@media @mobile {
+			margin-left: 0;
+		}
+
+		&:first-of-type {
+			@media @tablet {
+				margin-left: 0;
+			}
+
+			@media @mobile {
+				margin-right: 30px;
+			}
+		}
+
 		&::after {
 			content: "";
 
@@ -82,10 +117,17 @@
 
 			margin-left: 10px;
 
-			background: url(../img/icons/up--active.svg) center no-repeat;
+			background: url(../img/icons/up--active.png) center no-repeat;
 			background-size: contain;
 
 			transform: rotate(180deg);
+
+			@media @tablet {
+				width: 20px;
+				height: 20px;
+
+				margin-left: 5px;
+			}
 		}
 
 		&:hover {
@@ -101,12 +143,9 @@
 
 		@media @tablet {
 			flex-wrap: nowrap;
-			overflow-x: scroll;
 			justify-content: flex-start;
 
-			&::-webkit-scrollbar {
-				display: none;
-			}
+			.overflow-x();
 		}
 	}
 
@@ -161,6 +200,29 @@
 			}
 		}
 
+		&::after {
+			content: "";
+
+			display: block;
+			position: absolute;
+
+			right: 0;
+			top: 0;
+
+			width: 25px;
+			height: 25px;
+
+			background: url(../img/icons/logo.png) center no-repeat, #fff;
+			background-size: contain;
+
+			z-index: 3;
+
+			@media @mobile {
+				width: 20px;
+				height: 20px;
+			}
+		}
+
 		&--action {
 			overflow: visible;
 
@@ -188,6 +250,12 @@
 				@media @mobile {
 					width: 270px;
 				}
+			}
+
+			&::after {
+				content: "";
+
+				display: none;
 			}
 
 			.objects__item-title {
@@ -244,7 +312,7 @@
 		display: block;
 		position: relative;
 
-		padding: 30px 35px 50px;
+		padding: 30px 20px 50px;
 
 		background: #fff;
 
@@ -274,13 +342,24 @@
 		&--links {
 			font-weight: bold;
 			margin-bottom: 0;
+		}
 
-			li:hover {
+		&-link {
+			display: inline-block;
+
+			color: @textColor;
+			font-weight: bold;
+			font-size: inherit;
+			line-height: inherit;
+
+			background: none;
+			border: none;
+			outline: none;
+
+			cursor: pointer;
+
+			&:hover {
 				text-decoration: underline;
-			}
-
-			a {
-				color: @textColor;
 			}
 		}
 	}
@@ -332,6 +411,47 @@
 
 			@media @mobile {
 				display: none;
+			}
+		}
+	}
+
+	&__pagination {
+		flex: 0 0 100%;
+
+		display: block;
+		text-align: center;
+
+		&-link {
+			display: inline-block;
+
+			font-size: 0;
+			line-height: 40px;
+
+			width: 40px;
+			height: 40px;
+
+			box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.153);
+			background: url(../img/icons/next.png) center no-repeat, #fff;
+			background-size: 30px;
+
+			transition: .3s;
+
+			&:first-of-type {
+				margin-right: 30px;
+				transform: rotate(180deg);
+			}
+
+			&:hover {
+				background-color: @akcentColor;
+			}
+
+			&--blocked {
+				background-color: @greyColor;
+				cursor: default;
+
+				&:hover {
+					background-color: @greyColor;
+				}
 			}
 		}
 	}

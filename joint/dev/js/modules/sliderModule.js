@@ -88,45 +88,48 @@ var sliderModule = (function () {
 	};
 
 	var _searchSlider = function () {
-		var searchBlock = document.querySelector('.search__content'),
-		    stepNumberBlock = searchBlock.querySelector('.search__step-curr'),
-		    stepNumber = 0,
-		    searchSlides = searchBlock.querySelectorAll('.search__block'),
-		    nextBtns = searchBlock.querySelectorAll('.js--next-btn'),
-		    prevBtns = searchBlock.querySelectorAll('.js--prev-btn');
+		var searchBlocks = document.querySelectorAll('.search__content');
 
-		Array.prototype.forEach.call(nextBtns, function(nextBtn) {
-			nextBtn.addEventListener('click', (function (ev) {
-				ev.preventDefault();
+		Array.prototype.forEach.call(searchBlocks, function(searchBlock) {
+		  var stepNumberBlock = searchBlock.querySelector('.search__step-curr'),
+		      stepNumber = 0,
+		      searchSlides = searchBlock.querySelectorAll('.search__block'),
+		      nextBtns = searchBlock.querySelectorAll('.js--next-btn'),
+		      prevBtns = searchBlock.querySelectorAll('.js--prev-btn');
 
-				if (searchSlides[stepNumber] && searchSlides[stepNumber + 1]) {
-					searchSlides[stepNumber].classList.remove('search__block--active');
-					searchSlides[stepNumber].classList.add('search__block--visited');
-				};
+			Array.prototype.forEach.call(nextBtns, function(nextBtn) {
+				nextBtn.addEventListener('click', (function (ev) {
+					ev.preventDefault();
 
-				if (searchSlides[stepNumber + 1]) {
-					searchSlides[stepNumber + 1].classList.add('search__block--active');
-					stepNumberBlock.innerText = stepNumber + 2;
-					stepNumber++;
-				};
-			}));
-		});
+					if (searchSlides[stepNumber] && searchSlides[stepNumber + 1]) {
+						searchSlides[stepNumber].classList.remove('search__block--active');
+						searchSlides[stepNumber].classList.add('search__block--visited');
+					};
 
-		Array.prototype.forEach.call(prevBtns, function(prevBtn) {
-			prevBtn.addEventListener('click', (function (ev) {
-				ev.preventDefault();
+					if (searchSlides[stepNumber + 1]) {
+						searchSlides[stepNumber + 1].classList.add('search__block--active');
+						stepNumberBlock.innerText = stepNumber + 2;
+						stepNumber++;
+					};
+				}));
+			});
 
-				if (searchSlides[stepNumber] && searchSlides[stepNumber - 1]) {
-					searchSlides[stepNumber].classList.remove('search__block--active');
-				};
+			Array.prototype.forEach.call(prevBtns, function(prevBtn) {
+				prevBtn.addEventListener('click', (function (ev) {
+					ev.preventDefault();
 
-				if (searchSlides[stepNumber - 1]) {
-					searchSlides[stepNumber - 1].classList.add('search__block--active');
-					searchSlides[stepNumber - 1].classList.remove('search__block--visited');
-					stepNumberBlock.innerText = stepNumber;
-					stepNumber--;
-				};
-			}));
+					if (searchSlides[stepNumber] && searchSlides[stepNumber - 1]) {
+						searchSlides[stepNumber].classList.remove('search__block--active');
+					};
+
+					if (searchSlides[stepNumber - 1]) {
+						searchSlides[stepNumber - 1].classList.add('search__block--active');
+						searchSlides[stepNumber - 1].classList.remove('search__block--visited');
+						stepNumberBlock.innerText = stepNumber;
+						stepNumber--;
+					};
+				}));
+			});
 		});
 	};
 

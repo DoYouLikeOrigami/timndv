@@ -2,7 +2,7 @@ section.search
 	.search__left
 		h2.search__title
 			| Объекты на карте
-		.search__map
+		#map.search__map(data-x="59.82135121151628;59.89579862806462" data-y="30.326299667358402;30.264501053411855" data-hint="Название;Название2" data-links="1;2")
 
 	.search__right
 		.search__content
@@ -62,12 +62,23 @@ section.search
 				.search__block
 					.search__block-title
 						| Выберите район и год сдачи
-					label.search__label
-						select(multiple name="place")
-							option(disabled) Выберите районы
-							option(value="Невский") Невский р-н
-							option(value="Невский") Невский р-н
-							option(value="Невский") Невский р-н
+					.search__block-select
+						ul
+							li
+								label
+									span Выберите районы
+							li
+								input#tab1(type="checkbox")
+								label(for="tab1") Невский р-н
+
+							li
+								input#tab2(type="checkbox")
+								label(for="tab2") Московский р-н
+
+							li
+								input#tab3(type="checkbox")
+								label(for="tab3") Кировский р-н
+
 					label.search__label
 						span 2017 год
 						input(type="checkbox" name="year" value="2017")

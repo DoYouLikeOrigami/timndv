@@ -2,24 +2,32 @@ header.main-header
 	.main-header__wrap
 
 		.main-header__top
-			.main-header__top-left
+			.main-header__item
 				a.main-header__logo(href="/")
-					.main-header__logo-img
-						include ../icons/logo.pug
-					h4.main-header__logo-text
-						| ТИМ Недвижимость
+					.main-header__logo-top
+						.main-header__logo-img
+							include ../icons/logo.pug
+						h4.main-header__logo-text
+							span ТИМ
+							span Недвижимость
+					.main-header__logo-bottom
 						p
-							| Продажа недвижимости в&nbsp;Санкт-Петербурге и&nbsp;ЛО
-			.main-header__top-right
+							| Продажа недвижимости в&nbsp;Санкт&nbsp;Петербурге и&nbsp;ЛО
+
+			.main-header__item
+				p
+					| Наши услуги бесплатны
+
+			.main-header__item
 				.main-header__tel
-					a(href="tel:+78124018892") +7 (812) 408-18-92
+					a(href="tel:+78124081892") +7 (812) 408-18-92
 					button.btn.btn--upper.js--show-call-popup Заказать звонок
 
 		.main-header__bottom
 			nav.main-nav
-				a.main-nav__item.main-nav__item--attention(href="#") Новостройки
-				a.main-nav__item.main-nav__item--bigger.main-nav__item--attention(href="#") Квартиры в готовых домах
+				a.main-nav__item.main-nav__item--attention(href="/object/list") Новостройки
 				a.main-nav__item.main-nav__item--bigger.main-nav__item--attention(href="#") Вторичная недвижимость
-				a.main-nav__item(href="#") Услуги
-				a.main-nav__item(href="#") Ипотека
-				a.main-nav__item.main-nav__item--bigger(href="#") Условия покупки
+				a.main-nav__item.main-nav__item--bigger.main-nav__item--attention(href="#") Лучшие предложения
+				a.main-nav__item(href="/uslugi") Услуги
+				a.main-nav__item(href="/ipoteka") Ипотека
+				a.main-nav__item.main-nav__item--bigger(href="#") Для покупателей

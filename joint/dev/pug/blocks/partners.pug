@@ -3,14 +3,10 @@ section.partners
 		.partners__flex
 			h3.partners__title
 				| Наши партнёры
-			ul.partners__list
-				li.partners__item
-					a(href="#")
-						img(src="./static/img/partners/visa.png" alt="Название партнёра")
-				li.partners__item
-					a(href="#")
-						img(src="./static/img/partners/visa.png" alt="Название партнёра")
-				li.partners__item
-					a(href="#")
-						img(src="./static/img/partners/visa.png" alt="Название партнёра")
+			.partners__container
+				ul.partners__list
+					each val in [1, 2, 3, 4, 5, 6, 7, 8]
+						li.partners__item
+							div
+								img(src="./static/img/partners/" + val + ".jpg" alt="Партнёр ТИМ недвижимость")
 			button.btn.btn--bigger.btn--big-text.js--show-partners-popup Стать партнёром
